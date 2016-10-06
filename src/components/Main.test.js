@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { shallow, mount } from 'enzyme';
 import Main from './Main';
 
