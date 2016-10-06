@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import { browserHistory } from 'react-router';
 import Routes from './routes';
 import reducer from './reducers';
+import store from './store';
 
 render(
   <Provider store={store}>

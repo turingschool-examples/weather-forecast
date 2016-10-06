@@ -7,3 +7,5 @@ import rootReducer from './reducers';
 const store = createStore(rootReducer,
   applyMiddleware(...middleware)
 );
+
+export default store;
