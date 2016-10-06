@@ -24,5 +24,18 @@
   },
   "eslintConfig": {
     "extends": "./node_modules/react-scripts/config/eslint.js"
-  }
+  },
+  "description": "This project template was built with [Create React App](https://github.com/facebookincubator/create-react-app).",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kylem038/weather-forecast.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kylem038/weather-forecast/issues"
+  },
+  "homepage": "https://github.com/kylem038/weather-forecast#readme"
 }
