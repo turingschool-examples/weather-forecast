@@ -3,8 +3,7 @@ import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import { browserHistory } from 'react-router';
 import Routes from './routes';
-import store from './store';
-const middleware = [thunk, createLogger];
+import reducer from './reducers';
 
 render(
   <Provider store={store}>
