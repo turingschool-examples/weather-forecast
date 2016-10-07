@@ -5,11 +5,12 @@ const middleware = [thunk, createLogger];
 import rootReducer from './reducers';
 import currentWeather from './data/fake-current';
 
-const store = createStore(rootReducer,
-  applyMiddleware(...middleware)
-);
+const store = createStore(rootReducer, defaultState);
 
-
+//setting state in store - can refactor to set state in reducers later
+const defaultState = {
+  currentWeather
+};
 
 if (module.hot) {
   module.hot.accept('./reducers/', () => {
