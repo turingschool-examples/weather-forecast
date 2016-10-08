@@ -5,6 +5,7 @@ import { browserHistory } from 'react-router';
 import Routes from './routes';
 import reducer from './reducers';
 import store from './store';
+require('./css/main.css');
 
 render(
   <Provider store={store}>
