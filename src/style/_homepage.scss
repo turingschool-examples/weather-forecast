@@ -1,33 +1,58 @@
 #HomePage {
   height: 100vh;
-  h1 {
-    font-size: 40px;
-    margin-left: 50px;
-    margin-top: 30px;
-  }
 }
 
-.headerPlaceholder {
-  height: 40px;
-  background-color: black;
-  width: 90%;
-  margin: 10px auto;
+.CityContainer {
+  display: flex;
+  height: 60%;
+  margin: 0 auto;
+  padding-left: 5px;
+  position: relative;
 }
 
 .CityForecast,
 .PinNewCity {
-  display: inline-block;
-  height: 60%;
-  margin: 20px;
-  width: 25%;
+  min-height: 50%;
+  margin: 18px;
+  width: 30%;
 }
 
 .CityForecast {
   background-color: $color-forecast-background;
   border: 1px solid darken($color-forecast-background, 50);
+  li {
+    margin-bottom: 10px;
+    padding: 10px;
+  }
 }
+
+.city-name {
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
 
 .PinNewCity {
   background-color: $color-add-city;
   border: 1px solid darken($color-add-city, 30);
+  padding: 120px 15px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.ViewExtended {
+  bottom: 10%;
+  font-size: 14px;
+  padding-left: 5px;
+  position: absolute;
+  font-weight: bold;
+}
+
+.EditCities {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  float: right;
+  margin-right: 25px;
 }

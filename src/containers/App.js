@@ -7,6 +7,7 @@ class App extends Component {
   render() {
     return (
       <section className="App">
+        <h1 className="page-title">Weather Tracker</h1>
         <div>{this.props.children}</div>
       </section>
     )
