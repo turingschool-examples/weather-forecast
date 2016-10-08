@@ -1,0 +1,33 @@
+#HomePage {
+  height: 100vh;
+  h1 {
+    font-size: 40px;
+    margin-left: 50px;
+    margin-top: 30px;
+  }
+}
+
+.headerPlaceholder {
+  height: 40px;
+  background-color: black;
+  width: 90%;
+  margin: 10px auto;
+}
+
+.CityForecast,
+.PinNewCity {
+  display: inline-block;
+  height: 60%;
+  margin: 20px;
+  width: 25%;
+}
+
+.CityForecast {
+  background-color: $color-forecast-background;
+  border: 1px solid darken($color-forecast-background, 50);
+}
+
+.PinNewCity {
+  background-color: $color-add-city;
+  border: 1px solid darken($color-add-city, 30);
+}

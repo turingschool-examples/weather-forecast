@@ -1,2 +1,23 @@
 @import '_reset';
+@import '_variables';
+@import '_homepage';
 @import '_pinned-cities';
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: $color-main-background;
+  // font-family: $main-font;
+}
+
+body,
+.root,
+.App {
+  height: 100%;
+}

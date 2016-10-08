@@ -5,15 +5,14 @@ import { connect } from 'react-redux';
 class App extends Component {
   render() {
     return (
-      <section>
-       <div>{this.props.children}</div>
-     </section>
+      <section className="App">
+        <div>{this.props.children}</div>
+      </section>
     )
   }
 }
 
 const mapStateToProps = state => {
-
   return {};
 }
 
