@@ -8,9 +8,9 @@ export default class ExtendedForecast extends Component {
     return (
       <section id="ExtendedForecast">
       <FiveDay />
-      {/* <Header />
-      <Link to="/PinnedCities">Go to pinned cities</Link>
-      <Link to="/">Go to HomePage</Link> */}
+        <h1>Extended Forecast</h1>
+        <Link to="/Settings">Go to pinned cities</Link>
+        <Link to="/">Go to HomePage</Link>
      </section>
     )
   }

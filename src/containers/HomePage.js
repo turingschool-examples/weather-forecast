@@ -9,7 +9,7 @@ export default class Home extends Component {
       <div>
         <section id="HomePage">
           <h1>Home</h1>
-          <Link to="/PinnedCities">Pinned Cities</Link>
+          <Link to="/Settings">Pinned Cities</Link>
           <Link to="/ExtendedForecast">Extended Forecast</Link>
         </section>
       </div>
