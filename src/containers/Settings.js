@@ -9,10 +9,12 @@ export default class Settings extends Component {
         <Link to="/ExtendedForecast">Go to Extended Forecast</Link>
         <Link to="/">Go to HomePage</Link>
         <h1>Pinned Cities:</h1>
-        <h3>Boston</h3>
-        <h3>Jersey</h3>
-        <h3>Denver</h3>
-        <section className='PinCityArea'>
+        <section className='PinnedCities'>
+          <h3>{ '❌' } Boston</h3>
+          <h3>{ '❌' } Jersey</h3>
+          <h3>{ '❌' } Denver</h3>
+        </section>
+        <section className='InputCityArea'>
           <input placeholder='Zip Code' className='InputPinCity' />
           <button children='Pin New City' className='SubmitNewCity' />
         </section>
