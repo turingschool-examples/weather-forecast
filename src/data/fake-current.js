@@ -9,4 +9,7 @@ const currentWeather = {
 "dt":1369824698,
 "id":1851632,
 "name":"Shuzenji",
-"cod":200}
+"cod":200
+};
+
+export default currentWeather;
