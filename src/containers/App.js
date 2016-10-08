@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Header from './Header';
 // import { Link, Router, IndexRoute, Route, browserHistory } from 'react-router';
 
 class App extends Component {

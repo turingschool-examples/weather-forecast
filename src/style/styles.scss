@@ -1,7 +1,8 @@
 @import '_reset';
 @import '_variables';
-@import '_homepage';
-@import '_pinned-cities';
+@import 'header-style';
+@import '_five-day';
+@import '_settings';
 
 html {
   box-sizing: border-box;

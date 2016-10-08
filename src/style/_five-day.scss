@@ -1,0 +1,29 @@
+#title {
+  font-size: 1.5em;
+}
+
+#fiveDayForecast {
+  width: 85%;
+  height: 500px;
+  background-color: #d5e9f3;
+  border: 2px solid #74a0b5;
+  margin: auto;
+}
+
+#forecast{
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 40px;
+  h1 {
+    background-color: #74B594;
+    display: flex;
+    width: 95%;
+    height: 40px;
+    border: 2px solid #74a0b5;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    align-items: center;
+    border-radius: 5px;
+  }
+}
