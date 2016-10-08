@@ -1,17 +1,21 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Header from './Header';
+// import { Link, Router, IndexRoute, Route, browserHistory } from 'react-router';
 
 class App extends Component {
   render() {
     return (
-      <div>Hey!</div>
+      <section>
+      <Header />
+       <div>{this.props.children}</div>
+     </section>
     )
   }
 }
 
 const mapStateToProps = state => {
-  // return an object of redux store data
-  // that you'd like available in your component
+
   return {};
 }
 
