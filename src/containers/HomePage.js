@@ -8,7 +8,6 @@ export default class Home extends Component {
   render() {
     return (
       <section id="HomePage">
-        <Header />
         <section className="CityContainer">
           <article className="CityForecast">
             <ul><h2 className="city-name">Current weather for Chicago</h2>

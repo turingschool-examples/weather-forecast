@@ -8,6 +8,7 @@ class App extends Component {
     return (
       <section className="App">
         <h1 className="page-title">Weather Tracker</h1>
+        <Header />
         <div>{this.props.children}</div>
       </section>
     )
