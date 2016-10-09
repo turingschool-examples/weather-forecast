@@ -1,0 +1,35 @@
+#Settings {
+  height: 60vh;
+  padding: 5%;
+  width: 80%;
+}
+
+#Settings h1 {
+  font-size: 1.5em;
+  margin: 5%;
+}
+
+#Settings h3 {
+  font-size: 1.2em;
+}
+
+#Settings button {
+  border-radius: 10%;
+  margin-left: 5%;
+}
+
+#Settings input {
+  padding: 1%;
+}
+
+.PinnedCities {
+  display: flex;
+  flex-direction: column;
+  height: 60%;
+  justify-content: space-around;
+  margin-left: 10%;
+}
+
+.InputCityArea {
+  margin: 5%;
+}

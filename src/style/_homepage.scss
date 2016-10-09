@@ -1,0 +1,53 @@
+#HomePage {
+  height: 100vh;
+}
+
+.CityContainer {
+  display: flex;
+  height: 60%;
+  margin: 0 auto;
+  padding-left: 4%;
+  position: relative;
+}
+
+.CityForecast,
+.PinNewCity {
+  margin: 2%;
+  min-height: 50%;
+  width: 28%;
+}
+
+.CityForecast {
+  background-color: $color-forecast-background;
+  border: 1px solid darken($color-forecast-background, 50);
+  li {
+    @include standard-margin-bottom-padding;
+  }
+}
+
+.city-name {
+  @include standard-margin-bottom-padding;
+  @include font-style-bold(1em);
+}
+
+.PinNewCity {
+  @include font-style-bold(2em);
+  background-color: $color-add-city;
+  border: 1px solid darken($color-add-city, 30);
+  padding: 12% 2%;
+}
+
+.ViewExtended {
+  @include font-style-bold(1em);
+  bottom: 10%;
+  padding-left: 1%;
+  position: absolute;
+}
+
+.EditCities {
+  @include font-style-bold(1em);
+  color: black;
+  text-decoration: none;
+  float: right;
+  margin-right: 7%;
+}

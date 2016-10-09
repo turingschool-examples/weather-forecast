@@ -1,0 +1,24 @@
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1em;
+  height: 8vh;
+  background-color: black;
+  width: 95%;
+  margin: 0 auto;
+}
+
+#current-local-forecast {
+  color: white;
+  margin-left: 3%;
+}
+
+#city-name {
+  font-weight: bold;
+}
+
+#view-extended-forecast {
+  color: $color-view-forecast;
+  margin-right: 3%;
+}

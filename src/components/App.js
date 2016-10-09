@@ -1,17 +1,19 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Header from './Header';
 
 class App extends Component {
   render() {
     return (
-      <div>Hey!</div>
+      <section className="App">
+        <Header />
+        <div>{this.props.children}</div>
+      </section>
     )
   }
 }
 
 const mapStateToProps = state => {
-  // return an object of redux store data
-  // that you'd like available in your component
   return {};
 }
 
