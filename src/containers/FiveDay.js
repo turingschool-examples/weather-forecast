@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-// import { Link } from 'react-router';
+import React from 'react';
 import currentWeather from '../data/fake-current';
 
 const { temp, humidity, pressure, temp_min: tempMin, temp_max: tempMax } = currentWeather.main;
