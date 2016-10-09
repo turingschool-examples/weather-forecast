@@ -1,18 +1,18 @@
 import React from 'react';
 import currentWeather from '../data/fake-current';
 
-const FiveDay = ({ value }) => {
-  return (
-    <div className="fiveDayForecast">
-      <ul className="forecast"><h2>Extended Forecast for Omaha</h2>
-        <li>Temp: {currentWeather.main.temp}</li>
-        <li>Humidity: {currentWeather.main.humidity}</li>
-        <li>Pressure: {currentWeather.main.pressure}</li>
-        <li>Min Temp: {currentWeather.main.temp_min}</li>
-        <li>Max Temp: {currentWeather.main.temp_max}</li>
-      </ul>
-    </div>
-  )
-}
+const { temp, humidity, pressure, temp_min: tempMin, temp_max: tempMax } = currentWeather.main;
+
+const FiveDay = () => (
+      <div className="fiveDayForecast">
+        <ul className="forecast"><h2>Extended Forecast for Omaha</h2>
+          <li>Temp: {temp}</li>
+          <li>Humidity: {humidity}</li>
+          <li>Pressure: {pressure}</li>
+          <li>Min Temp: {tempMin}</li>
+          <li>Max Temp: {tempMax}</li>
+        </ul>
+      </div>
+)
 
 export default FiveDay;
