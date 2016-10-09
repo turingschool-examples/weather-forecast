@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import { connect } from 'react-redux';
 import { Link } from 'react-router';
 import Header from './Header';
 
@@ -10,7 +9,8 @@ export default class Home extends Component {
       <section id="HomePage">
         <section className="CityContainer">
           <article className="CityForecast">
-            <ul><h2 className="city-name">Current weather for Chicago</h2>
+            <h2 className="city-name">Current weather for Chicago</h2>
+            <ul>
               <li>Temperature: 64&#176; F</li>
               <li>Weather: Partly Cloudy</li>
               <li>Wind: 35mph</li>

@@ -1,5 +1,6 @@
 @import '_reset';
 @import '_variables';
+@import '_mixins';
 @import '_homepage';
 @import '_header-style';
 @import '_settings';
@@ -15,18 +16,12 @@ html {
 
 body {
   background-color: $color-main-background;
-  font-family: 'Open Sans';
-}
-
-body,
-.root,
-.App {
+  font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
   height: 100%;
 }
 
 .page-title {
-  font-size: 40px;
-  height: 80px;
-  padding-left: 45px;
-  padding-top: 20px;
+  font-size: 3em;
+  height: 15vh;
+  padding: 2% 5%;
 }

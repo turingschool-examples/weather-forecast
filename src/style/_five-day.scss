@@ -6,22 +6,23 @@
   background-color: $color-forecast-background;
   border: 2px solid darken($color-forecast-background, 50);
   height: 70vh;
-  margin: 10px auto;
+  margin: 3% auto;
   width: 85%;
 }
 
-.forecast {
-  font-size: 1.2em;
-  font-weight: bold;
-  margin: 40px;
+.forecast,
+.forecast-title {
+  @include font-style-bold(1.2em);
+  margin: 3%;
   li {
     align-items: center;
     background-color: $color-view-forecast;
-    border-radius: 5px;
+    border-radius: 2%;
     border: 2px solid darken($color-view-forecast, 20);
     display: flex;
-    height: 40px;
-    margin: 15px auto;
-    width: 95%;
+    height: 7vh;
+    margin: 3% auto;
+    padding-left: 2%;
+    width: 80%;
   }
 }

@@ -1,0 +1,10 @@
+
+@mixin standard-margin-bottom-padding {
+  margin-bottom: 4%;
+  padding: 4%;
+}
+
+@mixin font-style-bold($size) {
+  font-size: $size;
+  font-weight: bold;
+}
