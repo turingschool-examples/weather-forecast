@@ -12,8 +12,8 @@
 
 .CityForecast,
 .PinNewCity {
-  min-height: 50%;
   margin: 18px;
+  min-height: 50%;
   width: 28%;
 }
 
@@ -32,13 +32,12 @@
   padding: 10px;
 }
 
-
 .PinNewCity {
   background-color: $color-add-city;
   border: 1px solid darken($color-add-city, 30);
-  padding: 120px 15px;
   font-size: 28px;
   font-weight: bold;
+  padding: 120px 15px;
 }
 
 .ViewExtended {

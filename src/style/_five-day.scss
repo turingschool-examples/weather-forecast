@@ -1,16 +1,13 @@
-// #title {
-//   font-size: 1.5em;
-// }
 .ExtendedForecast {
   height: 60vh;
 }
 
 .fiveDayForecast {
-  width: 85%;
-  height: 70vh;
   background-color: $color-forecast-background;
-  border: 2px solid #74a0b5;
+  border: 2px solid darken($color-forecast-background, 50);
+  height: 70vh;
   margin: 10px auto;
+  width: 85%;
 }
 
 .forecast {
@@ -18,13 +15,13 @@
   font-weight: bold;
   margin: 40px;
   li {
-    background-color: $color-view-forecast;
-    display: flex;
-    width: 95%;
-    height: 40px;
-    border: 2px solid darken($color-view-forecast, 20);
-    margin: 15px auto;
     align-items: center;
+    background-color: $color-view-forecast;
     border-radius: 5px;
+    border: 2px solid darken($color-view-forecast, 20);
+    display: flex;
+    height: 40px;
+    margin: 15px auto;
+    width: 95%;
   }
 }
