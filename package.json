@@ -3,23 +3,43 @@
   "version": "0.0.1",
   "private": true,
   "devDependencies": {
+    "enzyme": "^2.4.1",
+    "react-addons-test-utils": "^15.3.2",
     "react-scripts": "^0.6.0",
     "redux-logger": "^2.6.1"
   },
   "dependencies": {
+    "css-loader": "^0.25.0",
+    "node-sass": "^3.10.1",
     "react": "^15.3.0",
     "react-dom": "^15.3.0",
     "react-redux": "^4.4.5",
     "react-router": "^2.8.1",
     "redux": "^3.5.2",
-    "redux-thunk": "^2.1.0"
+    "redux-thunk": "^2.1.0",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "./node_modules/react-scripts/config/eslint.js"
-  }
+  },
+  "description": "This project template was built with [Create React App](https://github.com/facebookincubator/create-react-app).",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kylem038/weather-forecast.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kylem038/weather-forecast/issues"
+  },
+  "homepage": "https://github.com/kylem038/weather-forecast#readme"
 }

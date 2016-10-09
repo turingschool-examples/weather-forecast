@@ -1,8 +1,8 @@
-const exampleReducer = (state = {}, action) => {
+const rootReducer = (state = {}, action) => {
   switch (action.type) {
     default:
       return state
   }
 }
 
-export default exampleReducer;
+export default rootReducer;
