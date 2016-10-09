@@ -1,9 +1,9 @@
 import React from 'react';
 import { IndexRoute, Router, Route  } from 'react-router';
-import App from './containers/App';
-import HomePage from './containers/HomePage';
-import Settings from './containers/Settings';
-import ExtendedForecast from './containers/ExtendedForecast';
+import App from './components/App';
+import HomePage from './components/HomePage';
+import Settings from './components/Settings';
+import ExtendedForecast from './components/ExtendedForecast';
 
 const Routes = (props) => (
   <Router {...props}>
