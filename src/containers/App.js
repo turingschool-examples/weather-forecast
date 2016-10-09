@@ -6,16 +6,16 @@ import Header from './Header';
 class App extends Component {
   render() {
     return (
-      <section>
-      <Header />
-       <div>{this.props.children}</div>
-     </section>
+      <section className="App">
+        <h1 className="page-title">Weather Tracker</h1>
+        <Header />
+        <div>{this.props.children}</div>
+      </section>
     )
   }
 }
 
 const mapStateToProps = state => {
-
   return {};
 }
 

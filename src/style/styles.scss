@@ -1,4 +1,32 @@
 @import '_reset';
-@import 'FiveDay';
+@import '_variables';
+@import '_homepage';
+@import '_header-style';
 @import '_settings';
-@import 'header-style';
+@import '_five-day';
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: $color-main-background;
+  font-family: 'Open Sans';
+}
+
+body,
+.root,
+.App {
+  height: 100%;
+}
+
+.page-title {
+  font-size: 40px;
+  height: 80px;
+  padding-left: 45px;
+  padding-top: 20px;
+}

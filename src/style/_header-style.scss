@@ -2,10 +2,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 10px;
-  height: 20px;
-  background-color: #34495e;
-  width: 90%;
+  font-size: 16px;
+  height: 40px;
+  background-color: black;
+  width: 95%;
   margin: auto;
 }
 
@@ -19,6 +19,6 @@
 }
 
 #view-extended-forecast {
-  color:#2ecc71;
+  color: $color-view-forecast;
   margin-right: 10px;
 }
