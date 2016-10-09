@@ -7,13 +7,13 @@ export default class FiveDay extends Component {
   render() {
     return (
       <div id="fiveDayForecast">
-        <p id="forecast">
+        <div id="forecast">
           <h1>Temp: {currentWeather.main.temp}</h1>
           <h1>Humidity: {currentWeather.main.humidity}</h1>
           <h1>Pressure: {currentWeather.main.pressure}</h1>
           <h1>Min Temp: {currentWeather.main.temp_min}</h1>
           <h1>Max Temp: {currentWeather.main.temp_max}</h1>
-        </p>
+        </div>
 
       </div>
     )
