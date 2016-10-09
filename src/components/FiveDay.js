@@ -5,7 +5,8 @@ const { temp, humidity, pressure, temp_min: tempMin, temp_max: tempMax } = curre
 
 const FiveDay = () => (
       <div className="fiveDayForecast">
-        <ul className="forecast"><h2>Extended Forecast for Omaha</h2>
+        <h2 className="forecast-title">Extended Forecast for Omaha</h2>
+        <ul className="forecast">
           <li>Temp: {temp}</li>
           <li>Humidity: {humidity}</li>
           <li>Pressure: {pressure}</li>
