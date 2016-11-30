@@ -17,7 +17,7 @@ const store = createStore(
   {}, // initial state object
   applyMiddleware(...middleware)
 )
-
+0
 render(
   <Provider store={store}>
     <Routes history={browserHistory} />
