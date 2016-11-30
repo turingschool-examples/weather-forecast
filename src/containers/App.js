@@ -6,6 +6,7 @@ class App extends Component {
   render() {
     return (
       <div>Hey!
+        <Link to='/'> HOME </Link>
         <Link to='/dashboard'> DASHBOARD </Link>
         <Link to='/forecast'> FORECAST </Link>
         <Link to='/settings'> SETTINGS </Link>
