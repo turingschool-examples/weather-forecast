@@ -1,19 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
-
-class App extends Component {
-  render() {
-    return (
-      <div>Hey!
-        <Link to='/'> HOME </Link>
-        <Link to='/dashboard'> DASHBOARD </Link>
-        <Link to='/forecast'> FORECAST </Link>
-        <Link to='/settings'> SETTINGS </Link>
-      </div>
-    )
-  }
-}
+import App from '../components/App';
 
 const mapStateToProps = state => {
   // return an object of redux store data
