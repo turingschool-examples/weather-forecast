@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router';
 
 class App extends Component {
   render() {
     return (
-      <div>Hey!</div>
+      <div>Hey!
+        <Link to='/dashboard'> DASHBOARD </Link>
+        <Link to='/forecast'> FORECAST </Link>
+        <Link to='/settings'> SETTINGS </Link>
+      </div>
     )
   }
 }
@@ -16,7 +21,7 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = dispatch => {
-  // return an object of methods you'd like 
+  // return an object of methods you'd like
   // to dispatch as redux actions
   return {};
 }

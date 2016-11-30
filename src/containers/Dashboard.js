@@ -4,7 +4,11 @@ import { connect } from 'react-redux';
 class Dashboard extends Component {
   render() {
     return (
-      <div>DEY!</div>
+      <div>DEY!
+        <Link to='/dashboard'> DASHBOARD </Link>
+        <Link to='/forecast'> FORECAST </Link>
+        <Link to='/settings'> SETTINGS </Link>
+      </div>
     )
   }
 }

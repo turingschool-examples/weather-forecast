@@ -4,7 +4,11 @@ import { connect } from 'react-redux';
 class Settings extends Component {
   render() {
     return (
-      <div>BLEY!</div>
+      <div>BLEY!
+        <Link to='/dashboard'> DASHBOARD </Link>
+        <Link to='/forecast'> FORECAST </Link>
+        <Link to='/settings'> SETTINGS </Link>
+      </div>
     )
   }
 }
