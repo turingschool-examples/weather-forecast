@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router';
 
-class App extends Component {
+class Settings extends Component {
   render() {
     return (
-      <div>Hey!
+      <div>BLEY!
         <Link to='/dashboard'> DASHBOARD </Link>
         <Link to='/forecast'> FORECAST </Link>
         <Link to='/settings'> SETTINGS </Link>
@@ -26,4 +25,4 @@ const mapDispatchToProps = dispatch => {
   return {};
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(Settings);
