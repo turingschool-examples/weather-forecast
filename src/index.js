@@ -17,10 +17,14 @@ const store = createStore(
   {}, // initial state object
   applyMiddleware(...middleware)
 )
-
+0
 render(
   <Provider store={store}>
     <Routes history={browserHistory} />
   </Provider>,
   document.getElementById('root')
 )
+//http://api.openweathermap.org/data/2.5/forecast/city?id=524901&APPID={APIKEY}
+//0fa5f7da0eba0ddb1679162cd1b64e3d
+// EXAMPLE CURRENT WEATHER @ GBANK
+ // http://api.openweathermap.org/data/2.5/forecast?lat=39.7509886&lon=-104.9961373&APPID=0fa5f7da0eba0ddb1679162cd1b64e3d
