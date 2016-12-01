@@ -8,14 +8,21 @@ import Settings from './containers/Settings';
 
 const Routes = (props) => (
   <Router {...props}>
-    <Route path="/" component={App} >
-      <Route path='forecast'>
-        <IndexRoute component={Forecast}/>
-      </Route>
-      {/* <IndexRoute to='/dashboard' component={Dashboard}/>
-      <IndexRoute to='/settings' component={Settings}/> */}
-    </Route>
+    <Route path="/" component={App} />
+    <Route path='forecast' component={Forecast}/>
+    <Route path='settings' component={Settings}/>
+    <Route path='dashboard' component={Dashboard}/>
   </Router>
 );
 
 export default Routes;
+
+
+
+{/* <Router history={browserHistory}>
+  <Route path='/' component={App}>
+    <IndexRoute component={Home} />
+    <Route path='about' component={About} />
+    <Route path='features' component={Features} />
+  </Route>
+</Router>, */}
