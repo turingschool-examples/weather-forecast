@@ -1,24 +1,31 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import App from '../components/App';
+import { fetchWeatherCurrentLocation, pinLocation } from '../actions/index'
 
-class App extends Component {
-  render() {
-    return (
-      <div>Hey!</div>
-    )
-  }
-}
+
+
 
 const mapStateToProps = state => {
-  // return an object of redux store data
-  // that you'd like available in your component
-  return {};
+	if (!state.LocalWeatherReducer.name) {
+    return {}
+  }
+  return {
+    name: state.LocalWeatherReducer.name,
+    temp: state.LocalWeatherReducer.main.temp,
+    desc: state.LocalWeatherReducer.weather[0].description,
+  }
+
 }
 
 const mapDispatchToProps = dispatch => {
-  // return an object of methods you'd like 
-  // to dispatch as redux actions
-  return {};
+  return {
+    fetchWeatherCurrentLocation: dispatch,
+    handleSubmit: (text) => {
+      dispatch(pinLocation(text))
+    }
+    }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
