@@ -5,10 +5,10 @@ import { Provider } from 'react-redux';
 import { browserHistory } from 'react-router';
 import Routes from './routes';
 import thunk from 'redux-thunk';
-import createLogger from 'redux-logger';
+
 import RootReducer from './reducers/RootReducer';
 
-const middleware = [thunk, createLogger];
+const middleware = [thunk];
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const store = createStore(
