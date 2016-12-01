@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router';
 
 class Settings extends Component {
   render() {
     return (
       <div>BLEY!
+        <Link to='/'> HOME </Link>
         <Link to='/dashboard'> DASHBOARD </Link>
         <Link to='/forecast'> FORECAST </Link>
         <Link to='/settings'> SETTINGS </Link>
