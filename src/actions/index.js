@@ -35,7 +35,7 @@ export const fetchWeatherCurrentLocation = (position) => {
 export const fetchWeatherPinnedLocation = (zip) => {
 	return (dispatch) => {
 
-		return fetch(`api.openweathermap.org/data/2.5/weather?zip=${zip },us&APPID=${apiKey}&units=imperial`)
+		return fetch(`api.openweathermap.org/data/2.5/weather?zip=${zip},us&APPID=${apiKey}&units=imperial`)
 		.then(weather => weather.json())
  		.then((weatherInfo) => {
 	 		dispatch({type: 'SET_PINNED_WEATHER', weatherInfo})

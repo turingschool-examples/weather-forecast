@@ -5,11 +5,10 @@ import { pinLocation } from '../actions/index';
 import SettingsForm from '../components/SettingsForm';
 
 const mapDispatchToProps = dispatch => {
-  return {
-    handleSubmit: (text) => {
+  return
+    bindActionCreators(handleSubmit: (text) => {
       dispatch(pinLocation(text))
-    }
+    })
   }
-}
 
-export default connect(mapDispatchToProps)(SettingsForm);
+export default connect(null, mapDispatchToProps)(SettingsForm);
