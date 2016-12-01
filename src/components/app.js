@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from './Header';
 
 
+
 class App extends Component {
 	componentWillMount(){
 		this.getCurrentLocation();
@@ -14,11 +15,18 @@ class App extends Component {
   }
 
 render() {
+	let input
 
 	return (
 		<article>
-			<Header />
-			{this.props.children}
+			<Header {...this.props}/>
+			<form onSubmit={ (e) => {
+				e.preventDefault()
+				this.props.handleSubmit(input.value)
+			}}>
+				<input ref={ node => { input = node }} />
+				<button> SUBMIT A CITY, PRETTY PLEASE </button>
+			</form>
 		</article>
 	)
 }
