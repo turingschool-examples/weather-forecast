@@ -29,7 +29,7 @@ class App extends Component {
 			var longitude = position.coords.longitude;
 			console.log("Latitude : " + latitude + " Longitude: " + longitude);
 	 }
-	 
+
  			errorHandler=(err)=> {
  				 if(err.code === 1) {
  						alert("Error: Access is denied!");
