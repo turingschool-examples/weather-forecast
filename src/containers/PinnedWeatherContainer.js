@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import PinnedWeather from '../components/PinnedWeather';
-import App from '../components/App';
+import App from '../components/app';
 import { fetchWeatherPinnedLocation } from '../actions/index'
 
 
