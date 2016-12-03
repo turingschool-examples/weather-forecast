@@ -1,4 +1,5 @@
 require('isomorphic-fetch');
+import axios from 'axios';
 
 export const RECEIVE_FORECAST = 'RECEIVE_FORECAST';
 
@@ -35,11 +36,16 @@ export const fetchWeatherCurrentLocation = (position) => {
 export const fetchWeatherPinnedLocation = (zip) => {
 	return (dispatch) => {
 
-		return fetch(`api.openweathermap.org/data/2.5/weather?zip=${zip },us&APPID=${apiKey}&units=imperial`)
-		.then(weather => weather.json())
- 		.then((weatherInfo) => {
-	 		dispatch({type: 'SET_PINNED_WEATHER', weatherInfo})
-	}
-)
+		return axios.get(`http://api.openweathermap.org/data/2.5/weather?zip=${zip},us&APPID=${apiKey}&units=imperial`)
+			.then((weatherInfo) => dispatch({ type: 'SET_PINNED_WEATHER', weatherInfo }))
+		  .catch(error => console.log(error) );
+
+		// return fetch(`api.openweathermap.org/data/2.5/weather?zip=${zip},us&APPID=${apiKey}&units=imperial`)
+		// .then(res => { console.log(res.json()); return res })
+		// .then(weather => weather.json())
+ 	// 	.then((weatherInfo) => {
+	 // 		dispatch({type: 'SET_PINNED_WEATHER', weatherInfo})
+// 	}
+// )
 }
 }

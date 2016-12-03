@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from './Header';
-
+import SettingsForm from '../containers/SettingsForm';
 
 
 class App extends Component {
@@ -20,13 +20,8 @@ render() {
 	return (
 		<article>
 			<Header {...this.props}/>
-			<form onSubmit={ (e) => {
-				e.preventDefault()
-				this.props.handleSubmit(input.value)
-			}}>
-				<input ref={ node => { input = node }} />
-				<button> SUBMIT A CITY, PRETTY PLEASE </button>
-			</form>
+			<SettingsForm />
+
 		</article>
 	)
 }
