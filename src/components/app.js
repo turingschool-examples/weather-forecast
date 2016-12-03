@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from './Header';
-import SettingsForm from './SettingsForm';
+import SettingsForm from '../containers/SettingsForm';
 
 
 class App extends Component {
@@ -21,6 +21,7 @@ render() {
 		<article>
 			<Header {...this.props}/>
 			<SettingsForm />
+
 		</article>
 	)
 }

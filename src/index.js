@@ -18,7 +18,7 @@ const store = createStore(
 		applyMiddleware(thunk)
 	)
 )
-0
+
 render(
   <Provider store={store}>
     <Routes history={browserHistory} />

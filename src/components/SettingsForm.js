@@ -5,8 +5,7 @@ const SettingsForm = ({ handleSubmit }) => {
     return (
       <form onSubmit={ (e) => {
         e.preventDefault()
-        {handleSubmit}
-        console.log(input.value)
+        handleSubmit(input.value)
       }}>
       <input ref={ node => { input = node }} />
       <button> SUBMIT A CITY, PRETTY PLEASE </button>
