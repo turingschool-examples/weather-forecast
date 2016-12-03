@@ -1,8 +1,6 @@
-import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import PinnedWeather from '../components/PinnedWeather';
-import App from '../components/app';
 import { fetchWeatherPinnedLocation } from '../actions/index'
 
 
@@ -22,7 +20,6 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return bindActionCreators({fetchWeatherPinnedLocation}, dispatch)
-  return {};
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(PinnedWeather);
