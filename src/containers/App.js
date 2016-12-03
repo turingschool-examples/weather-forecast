@@ -1,4 +1,3 @@
-import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import App from '../components/app';
@@ -21,7 +20,6 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return bindActionCreators({fetchWeatherCurrentLocation}, dispatch)
-  return {};
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

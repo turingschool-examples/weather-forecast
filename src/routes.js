@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, Route, IndexRoute, IndexRedirect } from 'react-router';
+import { Router, Route } from 'react-router';
 
 import App from './containers/App';
 import Dashboard from './containers/Dashboard';
@@ -16,13 +16,3 @@ const Routes = (props) => (
 );
 
 export default Routes;
-
-
-
-{/* <Router history={browserHistory}>
-  <Route path='/' component={App}>
-    <IndexRoute component={Home} />
-    <Route path='about' component={About} />
-    <Route path='features' component={Features} />
-  </Route>
-</Router>, */}
