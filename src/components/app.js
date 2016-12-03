@@ -21,7 +21,7 @@ render() {
 		<article>
 			<Header {...this.props}/>
 			<SettingsForm {...this.props}/>
-			<PinnedWeather {...this.props}/>
+			<PinnedWeather />
 		</article>
 	)
 }

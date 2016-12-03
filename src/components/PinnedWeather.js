@@ -1,6 +1,8 @@
 import React from 'react'
 
 const PinnedWeather = ({ name, temp, description }) => {
+
+  console.log( name, temp , description)
   return (
   <article>
     {/* { !!name ? */}

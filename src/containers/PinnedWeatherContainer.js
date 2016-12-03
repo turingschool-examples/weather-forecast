@@ -7,13 +7,15 @@ import { fetchWeatherPinnedLocation } from '../actions/index'
 
 
 const mapStateToProps = state => {
-	if (!state.PinnedWeatherReducer.name) {
+	const myWeatherObject = state.PinnedWeatherReducer
+	console.log(myWeatherObject)
+	if (!myWeatherObject.length) {
     return {}
   }
   return {
-    name: state.PinnedWeatherReducer.name,
-    temp: state.PinnedWeatherReducer.main.temp,
-    description: state.PinnedWeatherReducer.weather[0].description,
+    name: myWeatherObject[0].data.data.name,
+    temp: myWeatherObject[0].data.data.main.temp,
+    description: myWeatherObject[0].data.data.weather[0].description,
   }
 
 }
