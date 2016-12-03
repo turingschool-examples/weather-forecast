@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import App from '../components/app';
+import App from '../components/App';
 import { fetchWeatherCurrentLocation } from '../actions/index'
 
 
