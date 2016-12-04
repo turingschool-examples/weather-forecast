@@ -1,8 +1,8 @@
 
-const pinLocation = (state = {}, action) => {
+const pinLocation = (state = [], action) => {
   switch (action.type) {
-    case 'ADD_LOCATION':
-      return Object.assign({}, ...state, location: action)
+    case 'PIN_LOCATION':
+      return [...state, {location: action.weatherInfo.data.name}]
     default:
       return state
   }
