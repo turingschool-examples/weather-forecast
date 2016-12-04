@@ -6,7 +6,7 @@ const Header = ({ name, temp, desc }) => {
       <h1 id='title' className='glow'>Weather!</h1>
       { !!name ?
       <section id='current-forecast'>
-        The current forecast for {name} is {desc} at {temp}°F
+        The current forecast for {name} is {desc} at {Math.round(temp)}°F
       </section>
       : null }
     </article>
