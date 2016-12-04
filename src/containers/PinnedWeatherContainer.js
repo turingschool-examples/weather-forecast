@@ -14,7 +14,6 @@ const mapStateToProps = state => {
     temp: myWeatherObject[0].data.data.main.temp,
     description: myWeatherObject[0].data.data.weather[0].description,
   }
-
 }
 
 const mapDispatchToProps = dispatch => {

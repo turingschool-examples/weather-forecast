@@ -1,4 +1,3 @@
-
 const LocalWeatherReducer = (state = {}, action) => {
   switch (action.type) {
     case 'SET_LOCAL_WEATHER':

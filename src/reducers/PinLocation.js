@@ -1,4 +1,3 @@
-
 const pinLocation = (state = [], action) => {
   switch (action.type) {
     case 'PIN_LOCATION':

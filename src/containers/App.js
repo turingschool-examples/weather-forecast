@@ -12,7 +12,6 @@ const mapStateToProps = state => {
     temp: state.LocalWeatherReducer.main.temp,
     desc: state.LocalWeatherReducer.weather[0].description,
   }
-
 }
 
 const mapDispatchToProps = dispatch => {
