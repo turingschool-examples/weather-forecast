@@ -3,9 +3,6 @@ import { bindActionCreators } from 'redux';
 import App from '../components/app';
 import { fetchWeatherCurrentLocation } from '../actions/index'
 
-
-
-
 const mapStateToProps = state => {
 	if (!state.LocalWeatherReducer.name) {
     return {}

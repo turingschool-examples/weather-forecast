@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from './Header';
 import SettingsForm from '../containers/SettingsForm';
 import PinnedWeather from '../containers/PinnedWeatherContainer';
+import ExtendedLocal from '../containers/ExtendedLocalContainer'
 
 class App extends Component {
  	componentWillMount(){
@@ -11,6 +12,7 @@ class App extends Component {
    getCurrentLocation(){
      navigator.geolocation.getCurrentPosition((position) => {
        this.props.fetchWeatherCurrentLocation(position)
+       this.props.fetchExtendedWeatherCurrentLocation(position)
      })
    }
 
@@ -20,6 +22,7 @@ class App extends Component {
  			<Header {...this.props}/>
  			<SettingsForm {...this.props}/>
  			<PinnedWeather />
+      <ExtendedLocal />
  		</article>
  	)
  }
