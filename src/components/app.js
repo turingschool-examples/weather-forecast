@@ -46,11 +46,8 @@ class App extends Component {
  	return (
  		<article id='container'>
  			<Header {...this.props}/>
-      <Link to='/'> HOME </Link>
-      <Link to='/dashboard'> DASHBOARD </Link>
-      <Link to='/forecast'> FORECAST </Link>
-      <Link to='/settings'> SETTINGS </Link>
  			<PinnedWeather />
+      <Link to='/settings'> SETTINGS </Link>
  		</article>
  	  )
   }
