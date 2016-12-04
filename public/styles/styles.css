@@ -1,0 +1,87 @@
+body {
+    font-family: 'Neuton', serif;
+}
+#container {
+    border: 15px dashed #FF2776;
+    background: #FFFC2A;
+    height: 100vh;
+    text-align: center;
+}
+#header {
+    display: flex;
+    height: 50px;
+    margin: 15px;
+    width: 100%;
+}
+#title {
+    font-family: 'Gravitas One', cursive;
+    font-size: 40px;
+    color: #FF2776;
+    margin: 10px;
+    align-items: center;
+}
+#current-forecast, #pinned-weather {
+    display: flex;
+    height: 40px;
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 5px;
+    color: black;
+    border: 5px solid #2785FF;
+    background-color: #24E86E;
+    align-items: center;
+}
+#pinned-weather {
+    margin: 10px;
+}
+.glow {
+    animation: glow 1s infinite alternate;
+}
+#input-container {
+   display: flex;
+   height: 60px;
+   width: 400px;
+   margin: auto;
+   align-items: center;
+   justify-content: space-between;
+}
+#submitbtn {
+    width: 120px;
+    height: 48px;
+    margin: 8px auto;
+    border-radius: 5%;
+    border-color: #2785FF;
+    border-width: 8px;
+    background-color: #FF2776;
+}
+#zip-input {
+    height: 30px;
+    font-size: 24px;
+    outline-color: #24E86E;
+    border-radius: 5%;
+    padding: 10px;
+    text-align: center;
+}
+input:focus {
+    outline-color: #23D831
+}
+button:focus {
+    outline-color: #23D831;
+}
+button:enabled {
+    cursor: pointer;
+}
+button:disabled {
+    cursor: not-allowed;
+}
+@keyframes glow {
+        from {text-shadow: none;}
+        to {text-shadow: 0px 0px 70px #FF8300;
+        text-shadow: 0px 0px 60px #FF8300;
+        text-shadow: 0px 0px 50px #FF8300;
+        text-shadow: 0px 0px 40px #FF8300;
+        text-shadow: 0px 0px 30px #FF8300;
+        text-shadow: 0px 0px 20px #FF8300;
+        text-shadow: 0px 0px 10px #FF8300;
+        color: #FF8300;}
+}

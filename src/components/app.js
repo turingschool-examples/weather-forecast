@@ -16,7 +16,7 @@ class App extends Component {
 
  render() {
  	return (
- 		<article>
+ 		<article id='container'>
  			<Header {...this.props}/>
  			<SettingsForm {...this.props}/>
  			<PinnedWeather />

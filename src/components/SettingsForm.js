@@ -2,15 +2,22 @@ import React from 'react';
 
 const SettingsForm = ({ handleSubmit }) => {
     let input;
+
     return (
-      <form onSubmit={ (e) => {
+      <form
+        id='input-container'
+        onSubmit={ (e) => {
         e.preventDefault()
         handleSubmit(input.value)
       }}>
-      <input ref={ node => { input = node }} />
-      <button> SUBMIT A CITY, PRETTY PLEASE </button>
-    </form>
+        <input
+          type='number'
+          id='zip-input'
+          ref={ node => { input = node }} />
+        <button
+          id='submitbtn'> Enter a Zipcode
+        </button>
+      </form>
   )}
-
 
 export default SettingsForm;
