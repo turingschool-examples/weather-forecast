@@ -2,6 +2,15 @@ import { connect } from 'react-redux';
 import { fetchWeatherPinnedLocation, pinLocation } from '../actions/index';
 import SettingsForm from '../components/SettingsForm';
 
+const mapStateToProps = state => {
+	if (!state.PinLocation) {
+    return {}
+  }
+  return {
+    names: state.PinLocation.map((pins) => pins.location)
+  }
+
+}
 
 const mapDispatchToProps = dispatch => {
   return {
@@ -11,4 +20,4 @@ const mapDispatchToProps = dispatch => {
 }
 
 
-export default connect(null, mapDispatchToProps)(SettingsForm);
+export default connect(mapStateToProps, mapDispatchToProps)(SettingsForm);

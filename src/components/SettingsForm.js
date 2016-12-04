@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-const SettingsForm = ({ handleSubmit }) => {
-
+const SettingsForm = ({ names, handleSubmit }) => {
     let input;
+    console.log(names);
     return (
       <div>
         <Link to='/'> HOME </Link>
@@ -21,6 +21,7 @@ const SettingsForm = ({ handleSubmit }) => {
             id='submitbtn'> Enter a Zipcode
           </button>
         </form>
+        {names}
       </div>
   )}
 
