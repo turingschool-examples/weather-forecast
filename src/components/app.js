@@ -47,7 +47,7 @@ class App extends Component {
  		<article id='container'>
  			<Header {...this.props}/>
  			<PinnedWeather />
-      <Link to='/settings'> SETTINGS </Link>
+      <Link to='/settings' className='link'> SETTINGS </Link>
  		</article>
  	  )
   }

@@ -8,9 +8,9 @@ const Header = ({ name, temp, desc }) => {
       { !!name ?
       <section id='current-forecast'>
         The current forecast for {name} is {desc} at {Math.round(temp)}°F
+        <Link to='/forecast' className='link'> Extended Forecast </Link>
       </section>
       : null }
-      <Link to='/forecast'> Extended Forecast </Link>
     </article>
   )
 }
