@@ -6,7 +6,6 @@ import { fetchWeatherPinnedLocation } from '../actions/index'
 
 const mapStateToProps = state => {
 	const myWeatherObject = state.PinnedWeatherReducer
-	console.log(myWeatherObject)
 	if (!myWeatherObject.length) {
     return {}
   }
