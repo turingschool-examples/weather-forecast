@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router';
 
 const Header = ({ name, temp, desc }) => {
   return(
@@ -9,6 +10,7 @@ const Header = ({ name, temp, desc }) => {
         The current forecast for {name} is {desc} at {temp}°F
       </section>
       : null }
+      <Link to='/forecast'> Extended Forecast </Link>
     </article>
   )
 }
