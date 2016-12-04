@@ -39,6 +39,7 @@ class App extends Component {
    getCurrentLocation(){
      navigator.geolocation.getCurrentPosition((position) => {
        this.props.fetchWeatherCurrentLocation(position)
+       this.props.fetchExtendedLocation(position)
      })
    }
 
