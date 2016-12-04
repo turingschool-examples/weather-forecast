@@ -20,7 +20,7 @@ body {
     margin: 10px;
     align-items: center;
 }
-#current-forecast, #pinned-weather {
+#current-forecast, .pinned-weather {
     display: flex;
     height: 40px;
     font-size: 20px;
@@ -31,7 +31,7 @@ body {
     background-color: #24E86E;
     align-items: center;
 }
-#pinned-weather {
+.pinned-weather {
     margin: 10px;
 }
 .glow {

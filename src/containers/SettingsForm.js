@@ -9,7 +9,6 @@ const mapStateToProps = state => {
   return {
     names: state.PinLocation.map((pins) => pins.location)
   }
-
 }
 
 const mapDispatchToProps = dispatch => {
