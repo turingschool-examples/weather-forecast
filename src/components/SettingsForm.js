@@ -1,9 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-const SettingsForm = ({ names, handleSubmit }) => {
+const SettingsForm = ({ names, handleSubmit, handleDelete }) => {
     let input;
-    console.log(names);
+
+    if (names) {
+      names = names.map((pins, i) => <div key={i}> {pins.location} <button id='deletebtn' onClick={()=> handleDelete(i)}> DELETE </button></div>)
+    } else { names = '' }
+
     return (
       <div>
         <Link to='/'> HOME </Link>

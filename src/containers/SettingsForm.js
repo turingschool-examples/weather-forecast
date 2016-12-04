@@ -7,14 +7,20 @@ const mapStateToProps = state => {
     return {}
   }
   return {
-    names: state.PinLocation.map((pins) => pins.location)
+    names: state.PinLocation
   }
 }
 
 const mapDispatchToProps = dispatch => {
   return {
     handleSubmit: text => dispatch(fetchWeatherPinnedLocation(text))
-      .then(dispatch(pinLocation(text)))
+      .then(dispatch(pinLocation(text))),
+    handleDelete: (id) => {
+        dispatch({
+          type: 'DELETE_PINNED_CITY',
+          id,
+      })
+    },
   }
 }
 
