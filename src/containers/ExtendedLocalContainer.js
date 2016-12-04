@@ -11,8 +11,8 @@ const mapStateToProps = state => {
   }
   return {
     name: myWeatherObject.city.name,
-    temp: myWeatherObject.list[0].main.temp,
-    description: myWeatherObject.list[0].weather[0].description,
+    temp: myWeatherObject.list[1].main.temp,
+    description: myWeatherObject.list[1].weather[1].description,
   }
 }
 

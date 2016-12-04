@@ -22,7 +22,7 @@ class App extends Component {
  			<Header {...this.props}/>
  			<SettingsForm {...this.props}/>
  			<PinnedWeather />
-      <ExtendedLocal />
+      <ExtendedLocal {...this.props} />
  		</article>
  	)
  }
