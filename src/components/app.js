@@ -1,12 +1,40 @@
 import React, { Component } from 'react';
 import Header from './Header';
+import { Link } from 'react-router';
 import SettingsForm from '../containers/SettingsForm';
 import PinnedWeather from '../containers/PinnedWeatherContainer';
 
 class App extends Component {
- 	componentWillMount(){
- 		this.getCurrentLocation();
- 	}
+  componentWillMount(){
+    this.getCurrentLocation();
+  }
+
+  showLocation=(position)=> {
+       var latitude = position.coords.latitude;
+       var longitude = position.coords.longitude;
+       console.log("Latitude : " + latitude + " Longitude: " + longitude);
+    }
+
+       errorHandler=(err)=> {
+          if(err.code === 1) {
+             alert("Error: Access is denied!");
+          }
+
+          else if( err.code === 2) {
+             alert("Error: Position is unavailable!");
+          }
+       }
+
+       getLocation=()=>{
+
+          if(navigator.geolocation){
+             navigator.geolocation.getCurrentPosition(this.showLocation, this.errorHandler);
+          }
+
+          else{
+             alert("Sorry, browser does not support geolocation!");
+          }
+       }
 
    getCurrentLocation(){
      navigator.geolocation.getCurrentPosition((position) => {
@@ -18,38 +46,14 @@ class App extends Component {
  	return (
  		<article id='container'>
  			<Header {...this.props}/>
- 			<SettingsForm {...this.props}/>
+      <Link to='/'> HOME </Link>
+      <Link to='/dashboard'> DASHBOARD </Link>
+      <Link to='/forecast'> FORECAST </Link>
+      <Link to='/settings'> SETTINGS </Link>
  			<PinnedWeather />
  		</article>
- 	)
- }
-
- showLocation=(position)=> {
-			var latitude = position.coords.latitude;
-			var longitude = position.coords.longitude;
-			console.log("Latitude : " + latitude + " Longitude: " + longitude);
-	 }
-
- 			errorHandler=(err)=> {
- 				 if(err.code === 1) {
- 						alert("Error: Access is denied!");
- 				 }
-
- 				 else if( err.code === 2) {
- 						alert("Error: Position is unavailable!");
- 				 }
- 			}
-
- 			getLocation=()=>{
-
- 				 if(navigator.geolocation){
- 						navigator.geolocation.getCurrentPosition(this.showLocation, this.errorHandler);
- 				 }
-
- 				 else{
- 						alert("Sorry, browser does not support geolocation!");
- 				 }
- 			}
+ 	  )
   }
+ }
 
   export default App
