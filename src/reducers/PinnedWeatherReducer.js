@@ -1,4 +1,3 @@
-
 const PinnedWeatherReducer = (state = [], action) => {
   switch (action.type) {
     case 'SET_PINNED_WEATHER':
