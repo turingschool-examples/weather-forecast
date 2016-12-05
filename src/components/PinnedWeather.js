@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 const PinnedWeather = ({ state, id }) =>
 {
   return (
-    <div className="pinned-city">
+    <div className="pinned-weather">
       {state[id] ?
         <Link to={`/forecast/${id}`}>
           <div>

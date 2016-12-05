@@ -5,12 +5,12 @@ const Forecast = ({ state, local }) => {
   let data
   let name
   let id = window.location.pathname.slice(-1)
-
-
+  debugger
+  
   if(id >= 0) {
     name = state[id].data.current_observation.display_location.full
     data = state[id].data.forecast.simpleforecast.forecastday
-  } else if (id === 'l'){
+  } else if (id === 'l') {
     name = local.current_observation.display_location.full
     data = local.forecast.simpleforecast.forecastday
   }
@@ -24,7 +24,7 @@ const Forecast = ({ state, local }) => {
       <div>
         {data.map((item, index) => {
           return (
-              <div key='id'>
+              <div>
                   <h4>
                     {item.date.weekday}
                   </h4>

@@ -2,8 +2,8 @@ import { connect } from 'react-redux';
 import Forecast from '../components/forecast';
 
 const mapStateToProps = state => {
-	const myWeatherObject = state.PinLocation
-	if (!myWeatherObject.length) {
+	const myWeatherObject = state.LocalWeatherReducer
+	if (!myWeatherObject) {
     return {}
   }
   return {
