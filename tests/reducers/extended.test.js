@@ -1,4 +1,4 @@
-import ExtendedReducer from '../../src/reducers/ExtendedReducer'
+import ExtendedReducer from '../../src/reducers/LocalWeatherReducer'
 
 describe('extended reducer', () => {
   it('should return default state', () => {
