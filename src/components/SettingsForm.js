@@ -9,7 +9,7 @@ const SettingsForm = ({ names, handleSubmit, handleDelete }) => {
     } else { names = '' }
 
     return (
-      <div>
+      <div className="settings-form">
         <Link to=''> HOME </Link>
         <form
           id='input-container'
