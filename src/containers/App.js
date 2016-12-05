@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import App from '../components/app';
-import { fetchWeatherCurrentLocation, fetchExtendedWeatherCurrentLocation } from '../actions/index'
+import { fetchWeatherCurrentLocation, fetchExtendedLocation } from '../actions/index'
 
 const mapStateToProps = state => {
 	if (!state.LocalWeatherReducer.name) {
@@ -12,11 +12,10 @@ const mapStateToProps = state => {
     temp: state.LocalWeatherReducer.main.temp,
     desc: state.LocalWeatherReducer.weather[0].description,
   }
-
 }
 
 const mapDispatchToProps = dispatch => {
-  return bindActionCreators({fetchWeatherCurrentLocation, fetchExtendedWeatherCurrentLocation}, dispatch)
+  return bindActionCreators({fetchWeatherCurrentLocation, fetchExtendedLocation}, dispatch)
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

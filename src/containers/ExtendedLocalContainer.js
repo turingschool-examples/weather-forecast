@@ -1,10 +1,10 @@
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import ExtendedLocal from '../components/ExtendedLocal'
-import { fetchExtendedWeatherCurrentLocation } from '../actions/index'
+import { fetchExtendedLocation } from '../actions/index'
 
 const mapStateToProps = state => {
-  const myWeatherObject = state.ExtendedLocalWeatherReducer
+  const myWeatherObject = state.ExtendedReducer
   console.log(myWeatherObject)
   if (!myWeatherObject.length) {
     return {}
@@ -17,7 +17,7 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = dispatch => {
-  return bindActionCreators({ fetchExtendedWeatherCurrentLocation }, dispatch)
+  return bindActionCreators({ fetchExtendedLocation }, dispatch)
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(ExtendedLocal)

@@ -1,16 +1,32 @@
 import React from 'react';
+import { Link } from 'react-router';
 
-const SettingsForm = ({ handleSubmit }) => {
+const SettingsForm = ({ names, handleSubmit, handleDelete }) => {
     let input;
-    return (
-      <form onSubmit={ (e) => {
-        e.preventDefault()
-        handleSubmit(input.value)
-      }}>
-      <input ref={ node => { input = node }} />
-      <button> SUBMIT A CITY, PRETTY PLEASE </button>
-    </form>
-  )}
 
+    if (names) {
+      names = names.map((pins, i) => <div key={i}> {pins.location} <button id='deletebtn' onClick={()=> handleDelete(i)}> DELETE </button></div>)
+    } else { names = '' }
+
+    return (
+      <div>
+        <Link to='/'> HOME </Link>
+        <form
+          id='input-container'
+          onSubmit={ (e) => {
+          e.preventDefault()
+          handleSubmit(input.value)
+        }}>
+          <input
+            type='number'
+            id='zip-input'
+            ref={ node => { input = node }} />
+          <button
+            id='submitbtn'> Enter a Zipcode
+          </button>
+        </form>
+        {names}
+      </div>
+  )}
 
 export default SettingsForm;

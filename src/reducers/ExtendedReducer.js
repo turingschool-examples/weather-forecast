@@ -1,10 +1,10 @@
-const LocalWeatherReducer = (state = {}, action) => {
+const ExtendedReducer = (state = {}, action) => {
   switch (action.type) {
-    case 'SET_LOCAL_WEATHER':
+    case 'SET_EXTENDED_WEATHER':
       return Object.assign({}, state, action.weatherInfo)
     default:
       return state
   }
 }
 
-export default LocalWeatherReducer;
+export default ExtendedReducer;
