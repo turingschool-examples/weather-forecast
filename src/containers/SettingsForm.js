@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { fetchWeatherPinnedLocation, pinLocation, fetchExtendedWeatherPinnedLocation } from '../actions/index';
+import { fetchWeatherPinnedLocation, pinLocation } from '../actions/index';
 import SettingsForm from '../components/SettingsForm';
 
 const mapStateToProps = state => {

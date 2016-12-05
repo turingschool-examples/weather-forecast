@@ -24,7 +24,7 @@ const Forecast = ({ state, local }) => {
       <div>
         {data.map((item, index) => {
           return (
-              <div>
+              <div key='id'>
                   <h4>
                     {item.date.weekday}
                   </h4>

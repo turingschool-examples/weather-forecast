@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router';
-import { fetchWeatherPinnedLocation } from '../actions/index'
 
 const PinnedWeather = ({ state, id }) =>
 {

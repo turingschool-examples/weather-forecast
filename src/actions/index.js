@@ -11,8 +11,6 @@ export const fetchForecast = options => dispatch => {
   // return fetch API call
 };
 
-const apiKey = '0fa5f7da0eba0ddb1679162cd1b64e3d';
-
 export const fetchWeatherCurrentLocation = (position) => {
 	const latitude = position.coords.latitude;
  	const longitude = position.coords.longitude;

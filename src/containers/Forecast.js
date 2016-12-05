@@ -1,5 +1,4 @@
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import Forecast from '../components/forecast';
 
 const mapStateToProps = state => {
