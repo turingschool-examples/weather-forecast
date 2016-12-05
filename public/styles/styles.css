@@ -1,6 +1,9 @@
 body {
     font-family: 'Neuton', serif;
-    border: 5px solid #FF2776;
+    border-top: 5px solid #FF2776;
+    border-left: 5px solid #FF2776;
+    border-right: 5px solid #FF2776;
+    height: 100vh;
 }
 #container {
     border: 15px dashed #FF2776;
@@ -25,22 +28,64 @@ body {
   display: inline-block;
   margin: 10px;
   font-size: 20px;
+  border-bottom: 3px solid #23D831;
+}
+.extended-local {
+  margin-left: 2px;
+  font-size: 16px;
+  border-bottom: 2px solid #23D831;
+}
+.home-link {
+  font-size: 20px;
+  display: inline-block;
+  margin-left: 25px;
+}
+.day {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5px 0;
+  border-top: 5px solid #FF2776;
+}
+#name {
+  margin: 10px 0;
+  margin-left: 40%;
+  font-size: 20px;
+  font-family: 'Gravitas One', cursive;
+}
+.weekday {
+  font-family: 'Bree Serif', serif;
+  margin-left: 5px;
+}
+.current-pinned {
+  font-size: 35px;
 }
 a {
+  font-family: 'Bree Serif', serif;
+  font-size: 60px;
+  margin: auto;
   padding-bottom: 1px;
-  border-bottom: 2px solid #23D831;
+  border-bottom: 5px solid #23D831;
   color: black;
   text-decoration: none;
 }
 #current-forecast, .pinned-weather {
     display: flex;
     height: 40px;
-    font-size: 20px;
+    font-size: 14px;
     font-weight: bolder;
     padding: 5px;
     color: black;
     border: 5px solid #2785FF;
     align-items: center;
+}
+.month-name, .month-date, .year, .temp-high, .temp-low {
+}
+.icon {
+  align-self: flex-end;
+}
+.pinned-weather {
+    height: 100px;
 }
 .pinned-weather, .link {
     margin: 10px;
@@ -48,7 +93,9 @@ a {
 .glow {
     animation: glow 1s infinite alternate;
 }
-#input-container {
+#input-container, .cities {
+   padding-top: 20px;
+   padding-bottom: 20px;
    display: flex;
    height: 60px;
    width: 400px;
@@ -56,16 +103,22 @@ a {
    align-items: center;
    justify-content: space-between;
 }
-#submitbtn {
-    font-family: 'Neuton', serif;
+#submitbtn, #deletebtn {
+    font-family: 'Bree Serif', serif;
     font-size: 13px;
     width: 120px;
     height: 48px;
+    color: white;
     margin-left: 20px;
     border-radius: 5%;
     border-color: #2785FF;
     border-width: 8px;
-    background-color: #FF2776;
+    background-color: #23D831;
+}
+#deletebtn {
+  font-size: 12px;
+  width: 100px;
+  height: 40px;
 }
 #zip-input {
     height: 30px;
