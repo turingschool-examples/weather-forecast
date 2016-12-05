@@ -13,6 +13,7 @@ const Forecast = ({ state, local }) => {
     name = local.current_observation.display_location.full
     data = local.forecast.simpleforecast.forecastday
   }
+  let sp = ' '
 
   return (
     <div>
@@ -27,20 +28,20 @@ const Forecast = ({ state, local }) => {
                   <h4 className='weekday'>
                     {item.date.weekday}
                   </h4>
-                    <span className='month-name'>{item.date.monthname}</span>
-                    <span className='month-day'> {item.date.day}, </span>
-                    <span className='year'>{item.date.year}</span>
+                    <span className='month-name'>{item.date.monthname}{sp}
+                    {item.date.day},{sp}
+                    {item.date.year}</span>
                   {item.conditions}
-                <img
-                  className='icon'
-                  src={item.icon_url}
-                />
                   <span className='temp-high'>
                     High: {item.high.fahrenheit}&deg;
                   </span>
                   <span className='temp-low'>
                     Low: {item.low.fahrenheit}&deg;
                   </span>
+                  <img
+                    className='icon'
+                    src={item.icon_url}
+                  />
               </div>
           )
         })}
