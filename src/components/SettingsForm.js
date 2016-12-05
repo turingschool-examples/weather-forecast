@@ -22,6 +22,7 @@ const SettingsForm = ({ names, handleSubmit, handleDelete }) => {
             id='zip-input'
             ref={ node => { input = node }} />
           <button
+            disabled={names.length > 2}
             id='submitbtn'> Enter a Zipcode
           </button>
         </form>
