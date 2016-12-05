@@ -8,7 +8,7 @@ const mapStateToProps = state => {
     return {}
   }
   return {
-    state: myWeatherObject
+    state: myWeatherObject.PinnedWeatherReducer
   }
 }
 

@@ -1,23 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router';
+import { fetchWeatherPinnedLocation } from '../actions/index'
 
-const PinnedWeather = ({ names }) => {
-  let forecast;
-
-  console.log(names);
-
-  if (names) {
-    forecast = names.map((pins, i) => <div key={i} className='pinned-weather'> Current forecast for {pins.data.current_observation.display_location.full}: {pins.data.current_observation.temp_f} and {pins.data.current_observation.weather}°F
-    <Link to={`/forecast/${i}`} className='link'> Extended Forecast </Link>
-    </div>)
-  } else { forecast = '' }
-
+const PinnedWeather = ({ state, id }) => {
   return (
-  <article className="pinned-weather">
-    {forecast}
-  </article>
+    <div className="pinned-city">
+      {state[id] ?
+        <Link to={`/forecast/${id}`}>
+          <div>
+            {state[id].current_observation.display_location.full}                  {state[id].current_observation.temp_f}&deg;
+            {state[id].current_observation.weather}
+          </div>
+        </Link>
+        :
+        <Link to="/settings">
+          Save a New City
+        </Link>
+      }
+    </div>
   )
 }
+
 
 
 export default PinnedWeather

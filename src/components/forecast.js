@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router'
 
-const ExtendedForecast = ({ pinned, current, params }) => {
+const Forecast = ({ pinned, current, params }) => {
   const id = params.id
   let list
   let name
@@ -48,4 +48,4 @@ const ExtendedForecast = ({ pinned, current, params }) => {
   )
 }
 
-export default ExtendedForecast
+export default Forecast

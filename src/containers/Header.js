@@ -1,7 +1,5 @@
 import { connect } from 'react-redux';
-// import { bindActionCreators } from 'redux';
 import Header from '../components/Header';
-// import { fetchWeatherCurrentLocation, fetchExtendedLocation } from '../actions/index'
 
 const mapStateToProps = state => {
 	if (!state.LocalWeatherReducer.current_observation) {
@@ -13,9 +11,5 @@ const mapStateToProps = state => {
     desc: state.LocalWeatherReducer.current_observation.weather,
   }
 }
-
-// const mapDispatchToProps = dispatch => {
-//   return bindActionCreators({fetchWeatherCurrentLocation, fetchExtendedLocation}, dispatch)
-// }
 
 export default connect(mapStateToProps)(Header);

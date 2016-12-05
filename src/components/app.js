@@ -1,45 +1,23 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
-import { fetchCurrentLocationWeather, fetchPinnedLocationWeather } from '../actions/index'
-import Header from '../containers/Header'
-import Dashboard from '../containers/Dashboard'
-import ExtendedLocal from '../containers/ExtendedLocalContainer'
-import { Link } from 'react-router';
-
-class App extends Component {
-  componentWillMount() {
-    this.getCurrentLocation()
-  }
-
-  getCurrentLocation(){
-       navigator.geolocation.getCurrentPosition((position) => {
-         this.props.fetchWeatherCurrentLocation(position)
-       })
-     }
-
-  render() {
-    return (
-      <article>
-        <Header {...this.props}/>
-        {/* <Dashboard /> */}
-        {/* <ExtendedLocal /> */}
-        <Link to='/settings'> SETTINGS </Link>
-        {this.props.children}
-      </article>
-    )
-  }
-}
-
-const mapStateToProps = (state) => {
-  return {}
-}
-
-const mapDispatchToProps = (dispatch) => {
-  return bindActionCreators({ fetchCurrentLocationWeather, fetchPinnedLocationWeather }, dispatch)
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(App)
+// import React, { Component } from 'react'
+// import { connect } from 'react-redux'
+// import { bindActionCreators } from 'redux'
+// import { fetchCurrentLocationWeather, fetchPinnedLocationWeather } from '../actions/index'
+// import Header from '../containers/Header'
+// import Dashboard from './dashboard'
+// import { Link } from 'react-router';
+//
+// class App extends Component {
+// }
+//
+// const mapStateToProps = (state) => {
+//   return {}
+// }
+//
+// const mapDispatchToProps = (dispatch) => {
+//   return bindActionCreators({ fetchCurrentLocationWeather, fetchPinnedLocationWeather }, dispatch)
+// }
+//
+// export default connect(mapStateToProps, mapDispatchToProps)(App)
 
 // import React, { Component } from 'react';
 // import Header from './Header';
