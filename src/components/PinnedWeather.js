@@ -11,7 +11,7 @@ const PinnedWeather = ({ current, extended }) => {
   } else { forecast = '' }
 
   return (
-  <article>
+  <article className="pinned-weather">
     {forecast}
   </article>
   )
