@@ -9,7 +9,7 @@ const Header = ({ name, temp, desc }) => {
       { !!name ?
       <section id='current-forecast'>
         The current forecast for {name} is {desc} at {Math.round(temp)}°F
-        <Link to={`/forecast/${id}`} className='link'> Extended Forecast </Link>
+        <Link to={`/forecast/${id}`} className='extended-local'> Extended Forecast </Link>
       </section>
       : null }
     </article>

@@ -6,7 +6,7 @@ const Forecast = ({ state, local }) => {
   let name
   let id = window.location.pathname.slice(-1)
   debugger
-  
+
   if(id >= 0) {
     name = state[id].data.current_observation.display_location.full
     data = state[id].data.forecast.simpleforecast.forecastday
@@ -17,11 +17,11 @@ const Forecast = ({ state, local }) => {
 
   return (
     <div>
-    <Link to=''> HOME </Link>
-      <h1>
+    <Link className='home-link' to=''> HOME </Link>
+      <h1 id='name'>
         {name}
       </h1>
-      <div>
+      <div className='extended-container'>
         {data.map((item, index) => {
           return (
               <div>

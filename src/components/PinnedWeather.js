@@ -8,8 +8,13 @@ const PinnedWeather = ({ state, id }) =>
       {state[id] ?
         <Link to={`/forecast/${id}`}>
           <div>
-            {state[id].data.current_observation.display_location.full}                  {state[id].data.current_observation.temp_f}&deg;
-            {state[id].data.current_observation.weather}
+            <span className='pinned-city'>
+              {state[id].data.current_observation.display_location.full}
+            </span>
+            <span className='pinned-observation'>
+              {state[id].data.current_observation.temp_f}&deg;
+              {state[id].data.current_observation.weather}
+            </span>
           </div>
         </Link>
         :
