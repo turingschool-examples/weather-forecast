@@ -1,17 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router'
 
-const Forecast = ({ pinned, current, params }) => {
-  const id = params.id
-  let list
+const Forecast = ({ state, local }) => {
+  let data
   let name
+  let id = window.location.pathname.slice(-1)
 
   if(id >= 0) {
-    name = pinned[id].current_observation.display_location.full
-    list = pinned[id].forecast.simpleforecast.forecastday
+    name = state[id].data.current_observation.display_location.full
+    data = state[id].data.forecast.simpleforecast.forecastday
   } else {
-    name = current.current_observation.display_location.full
-    list = current.forecast.simpleforecast.forecastday
+    name = local.current_observation.display_location.full
+    data = local.forecast.simpleforecast.forecastday
   }
 
   return (
@@ -21,7 +21,7 @@ const Forecast = ({ pinned, current, params }) => {
         {name}
       </h1>
       <div>
-        {list.map((item, index) => {
+        {data.map((item, index) => {
           return (
               <div>
                   <h4>

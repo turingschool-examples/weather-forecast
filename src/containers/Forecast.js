@@ -3,12 +3,13 @@ import { bindActionCreators } from 'redux';
 import Forecast from '../components/forecast';
 
 const mapStateToProps = state => {
-	const myWeatherObject = state.PinnedWeatherReducer
+	const myWeatherObject = state.PinLocation
 	if (!myWeatherObject.length) {
     return {}
   }
   return {
-    state: myWeatherObject.PinnedWeatherReducer
+    state: state.PinLocation,
+		local: state.LocalWeatherReducer
   }
 }
 
