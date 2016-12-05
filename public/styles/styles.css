@@ -31,7 +31,7 @@ body {
     background-color: #24E86E;
     align-items: center;
 }
-.pinned-weather {
+.pinned-weather, .link {
     margin: 10px;
 }
 .glow {
@@ -77,13 +77,13 @@ button:disabled {
     cursor: not-allowed;
 }
 @keyframes glow {
-        from {text-shadow: none;}
-        to {text-shadow: 0px 0px 70px #FF8300;
-        text-shadow: 0px 0px 60px #FF8300;
-        text-shadow: 0px 0px 50px #FF8300;
-        text-shadow: 0px 0px 40px #FF8300;
-        text-shadow: 0px 0px 30px #FF8300;
-        text-shadow: 0px 0px 20px #FF8300;
-        text-shadow: 0px 0px 10px #FF8300;
-        color: #FF8300;}
+    from {text-shadow: none;}
+    to {text-shadow: 0px 0px 70px #FF8300;
+    text-shadow: 0px 0px 60px #FF8300;
+    text-shadow: 0px 0px 50px #FF8300;
+    text-shadow: 0px 0px 40px #FF8300;
+    text-shadow: 0px 0px 30px #FF8300;
+    text-shadow: 0px 0px 20px #FF8300;
+    text-shadow: 0px 0px 10px #FF8300;
+    color: #FF8300;}
 }

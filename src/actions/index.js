@@ -27,12 +27,22 @@ export const fetchWeatherCurrentLocation = (position) => {
 	}
 }
 
+export const fetchExtendedWeatherPinnedLocation = ( zip ) => {
+  return (dispatch) => {
+    return fetch(`https://api.wunderground.com/api/881631f063e09bd3/conditions/forecast10day/alerts/hourly10day/q/${zip}.json`)
+      .then(weatherInfo => weatherInfo.json())
+      .then((weatherInfo) => dispatch({type: 'SET_PINNED_EXTENDED', weatherInfo}))
+			.catch(error => console.log(error))
+  	}
+};
+
+
 export const fetchWeatherPinnedLocation = (zip) => {
 	return (dispatch) => {
 
 		return axios.get(`http://api.openweathermap.org/data/2.5/weather?zip=${zip},us&APPID=${apiKey}&units=imperial`)
-			.then((weatherInfo) => dispatch({ type: 'SET_PINNED_WEATHER', weatherInfo }))
-		  .catch(error => console.log(error) );
+			.then(weatherInfo => dispatch({ type: 'SET_PINNED_WEATHER', weatherInfo }))
+		  .catch(error => console.log(error));
 		}
 	}
 
@@ -49,7 +59,6 @@ export const fetchWeatherPinnedLocation = (zip) => {
 		 	const longitude = position.coords.longitude;
 
 			return (dispatch) => {
-
 				return fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&APPID=${apiKey}&units=imperial`)
 				.then(weather => weather.json())
 		 		.then((weatherInfo) => {

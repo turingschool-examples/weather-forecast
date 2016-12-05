@@ -16,26 +16,26 @@ class App extends Component {
        console.log("Latitude : " + latitude + " Longitude: " + longitude);
     }
 
-       errorHandler=(err)=> {
-          if(err.code === 1) {
-             alert("Error: Access is denied!");
-          }
+     errorHandler=(err)=> {
+        if(err.code === 1) {
+           alert("Error: Access is denied!");
+        }
 
-          else if( err.code === 2) {
-             alert("Error: Position is unavailable!");
-          }
-       }
+        else if( err.code === 2) {
+           alert("Error: Position is unavailable!");
+        }
+     }
 
-       getLocation=()=>{
+     getLocation=()=>{
 
-          if(navigator.geolocation){
-             navigator.geolocation.getCurrentPosition(this.showLocation, this.errorHandler);
-          }
+        if(navigator.geolocation){
+           navigator.geolocation.getCurrentPosition(this.showLocation, this.errorHandler);
+        }
 
-          else{
-             alert("Sorry, browser does not support geolocation!");
-          }
-       }
+        else{
+           alert("Sorry, browser does not support geolocation!");
+        }
+     }
 
    getCurrentLocation(){
      navigator.geolocation.getCurrentPosition((position) => {

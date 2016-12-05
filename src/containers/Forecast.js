@@ -1,31 +1,16 @@
-import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router';
+import { bindActionCreators } from 'redux';
+import Forecast from '../components/forecast';
 
-
-class Forecast extends Component {
-  render() {
-    return (
-      <div>SHEY!
-        <Link to='/'> HOME </Link>
-        <Link to='/dashboard'> DASHBOARD </Link>
-        <Link to='/forecast'> FORECAST </Link>
-        <Link to='/settings'> SETTINGS </Link>
-      </div>
-    )
+const mapStateToProps = state => {
+	const myWeatherObject = state.PinnedWeatherReducer
+	if (!myWeatherObject.length) {
+    return {}
+  }
+  return {
+    state: myWeatherObject
   }
 }
 
-const mapStateToProps = state => {
-  // return an object of redux store data
-  // that you'd like available in your component
-  return {};
-}
 
-const mapDispatchToProps = dispatch => {
-  // return an object of methods you'd like
-  // to dispatch as redux actions
-  return {};
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Forecast);
+export default connect(mapStateToProps)(Forecast);
