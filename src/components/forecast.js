@@ -6,10 +6,11 @@ const Forecast = ({ state, local }) => {
   let name
   let id = window.location.pathname.slice(-1)
 
+
   if(id >= 0) {
     name = state[id].data.current_observation.display_location.full
     data = state[id].data.forecast.simpleforecast.forecastday
-  } else {
+  } else if (id === 'l'){
     name = local.current_observation.display_location.full
     data = local.forecast.simpleforecast.forecastday
   }
