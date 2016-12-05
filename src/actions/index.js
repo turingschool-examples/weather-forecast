@@ -59,7 +59,6 @@ export const fetchWeatherPinnedLocation = (zip) => {
 		 	const longitude = position.coords.longitude;
 
 			return (dispatch) => {
-
 				return fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&APPID=${apiKey}&units=imperial`)
 				.then(weather => weather.json())
 		 		.then((weatherInfo) => {
