@@ -1,7 +1,7 @@
-import { connect } from 'react-redux'
-// import { bindActionCreators } from 'redux'
-import ExtendedLocal from '../components/ExtendedLocal'
-import { fetchExtendedLocation } from '../actions/index'
+import { connect } from 'react-redux';
+// import { bindActionCreators } from 'redux';
+import Header from '../components/Header';
+// import { fetchWeatherCurrentLocation, fetchExtendedLocation } from '../actions/index'
 
 const mapStateToProps = state => {
 	if (!state.LocalWeatherReducer.current_observation) {
@@ -15,7 +15,7 @@ const mapStateToProps = state => {
 }
 
 // const mapDispatchToProps = dispatch => {
-//   return bindActionCreators({ fetchExtendedLocation }, dispatch)
+//   return bindActionCreators({fetchWeatherCurrentLocation, fetchExtendedLocation}, dispatch)
 // }
 
-export default connect(mapStateToProps)(ExtendedLocal)
+export default connect(mapStateToProps)(Header);

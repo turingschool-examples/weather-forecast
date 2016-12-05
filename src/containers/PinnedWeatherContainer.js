@@ -5,18 +5,12 @@ import { fetchWeatherPinnedLocation } from '../actions/index'
 
 
 const mapStateToProps = state => {
-	const myWeatherObject = state.PinnedWeatherReducer
-	if (!myWeatherObject.length) {
+	if (!state.PinLocation) {
     return {}
   }
   return {
-    current: myWeatherObject.filter((obj) => obj.data),
-    extended: myWeatherObject.filter((obj) => obj.extended)
+    names: state.PinLocation
   }
 }
 
-const mapDispatchToProps = dispatch => {
-  return bindActionCreators({fetchWeatherPinnedLocation}, dispatch)
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(PinnedWeather);
+export default connect(mapStateToProps)(PinnedWeather);

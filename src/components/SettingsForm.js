@@ -5,7 +5,7 @@ const SettingsForm = ({ names, handleSubmit, handleDelete }) => {
     let input;
 
     if (names) {
-      names = names.map((pins, i) => <div key={i}> {pins.location} <button id='deletebtn' onClick={()=> handleDelete(i)}> DELETE </button></div>)
+      names = names.map((pins, i) => <div key={i}> {pins.data.current_observation.display_location.full} <button id='deletebtn' onClick={()=> handleDelete(i)}> DELETE </button></div>)
     } else { names = '' }
 
     return (

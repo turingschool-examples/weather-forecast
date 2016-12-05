@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
+import PinnedWeather from '../components/PinnedWeather'
 
 
 class Dashboard extends Component {
   render() {
     return (
-      <div>DEY!
+      <div>
         <Link to='/'> HOME </Link>
         <Link to='/dashboard'> DASHBOARD </Link>
         <Link to='/forecast'> FORECAST </Link>
         <Link to='/settings'> SETTINGS </Link>
+        
       </div>
     )
   }
