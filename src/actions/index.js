@@ -29,7 +29,7 @@ export const fetchWeatherCurrentLocation = (position) => {
 
 export const fetchExtendedWeatherPinnedLocation = ( zip ) => {
   return (dispatch) => {
-    return fetch(`https://api.wunderground.com/api/881631f063e09bd3/conditions/forecast10day/alerts/hourly10day/q/${zip}.json`)
+    return fetch(`https://api.wunderground.com/api/f9433085853dff39/conditions/forecast10day/alerts/hourly10day/q/${zip}.json`)
       .then(weatherInfo => weatherInfo.json())
       .then((weatherInfo) => dispatch({type: 'SET_PINNED_EXTENDED', weatherInfo}))
 			.catch(error => console.log(error))
