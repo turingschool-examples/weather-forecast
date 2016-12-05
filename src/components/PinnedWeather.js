@@ -5,7 +5,6 @@ const PinnedWeather = ({ state, id }) =>
 {
   let sp = ' '
   return (
-<<<<<<< Updated upstream
     <div className="pinned-weather">
       {state[id] ?
         <Link to={`/forecast/${id}`}>
@@ -25,11 +24,6 @@ const PinnedWeather = ({ state, id }) =>
         </Link>
       }
     </div>
-=======
-  <div>
-    {forecast}
-  </div>
->>>>>>> Stashed changes
   )
 }
 
