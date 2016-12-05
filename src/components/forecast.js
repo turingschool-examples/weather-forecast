@@ -5,7 +5,6 @@ const Forecast = ({ state, local }) => {
   let data
   let name
   let id = window.location.pathname.slice(-1)
-  debugger
 
   if(id >= 0) {
     name = state[id].data.current_observation.display_location.full
@@ -24,21 +23,21 @@ const Forecast = ({ state, local }) => {
       <div className='extended-container'>
         {data.map((item, index) => {
           return (
-              <div>
-                  <h4>
+              <div className='day'>
+                  <h4 className='weekday'>
                     {item.date.weekday}
                   </h4>
-                    <span>{item.date.monthname}</span>
-                    <span> {item.date.day}, </span>
-                    <span>{item.date.year}</span>
+                    <span className='month-name'>{item.date.monthname}</span>
+                    <span className='month-day'> {item.date.day}, </span>
+                    <span classNam='year'>{item.date.year}</span>
                   {item.conditions}
                 <img
                   src={item.icon_url}
                 />
-                  <span >
+                  <span className='temp-high'>
                     High: {item.high.fahrenheit}&deg;
                   </span>
-                  <span >
+                  <span className='temp-low'>
                     Low: {item.low.fahrenheit}&deg;
                   </span>
               </div>
