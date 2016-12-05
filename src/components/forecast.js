@@ -29,9 +29,10 @@ const Forecast = ({ state, local }) => {
                   </h4>
                     <span className='month-name'>{item.date.monthname}</span>
                     <span className='month-day'> {item.date.day}, </span>
-                    <span classNam='year'>{item.date.year}</span>
+                    <span className='year'>{item.date.year}</span>
                   {item.conditions}
                 <img
+                  className='icon'
                   src={item.icon_url}
                 />
                   <span className='temp-high'>
