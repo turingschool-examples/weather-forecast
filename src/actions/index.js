@@ -34,18 +34,14 @@ export const fetchWeatherPinnedLocation = (zip) => {
 }
 }
 
-export const fetchExtendedWeatherCurrentLocation = (position) => {
+export const
+ fetchExtendedWeatherCurrentLocation = (position) => {
 	const latitude = position.coords.latitude;
  	const longitude = position.coords.longitude;
-
 	return dispatch => {
-		return fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&APPID=${apiKey}&units=imperial`)
-		.then(weather => weather.json())
- 		.then((weatherInfo) => {
-	 		dispatch({type: 'SET_LOCAL_EXTENDED_WEATHER', weatherInfo})
-			}
-		)
+		return axios.get(`http://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&APPID=${apiKey}&units=imperial`)
+		.then (console.log(dispatch))
+ 		.then((weatherInfo) => dispatch({type: 'SET_LOCAL_EXTENDED_WEATHER', weatherInfo}))
 		.catch(error => console.log(error))
-
   }
 }
