@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import Forecast from '../components/Forecast';
+import Forecast from '../components/forecast';
 
 const mapStateToProps = state => {
 	const myWeatherObject = state.PinnedWeatherReducer

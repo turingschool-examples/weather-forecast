@@ -10,7 +10,8 @@ const mapStateToProps = state => {
     return {}
   }
   return {
-    state: myWeatherObject
+    current: myWeatherObject.filter((obj) => obj.data),
+    extended: myWeatherObject.filter((obj) => obj.extended)
   }
 }
 
