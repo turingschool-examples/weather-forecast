@@ -3,6 +3,7 @@ import Header from './Header';
 import { Link } from 'react-router';
 import SettingsForm from '../containers/SettingsForm';
 import PinnedWeather from '../containers/PinnedWeatherContainer';
+import ExtendedLocal from '../containers/ExtendedLocalContainer'
 
 class App extends Component {
   componentWillMount(){
@@ -48,6 +49,7 @@ class App extends Component {
  		<article id='container'>
  			<Header {...this.props}/>
  			<PinnedWeather />
+      <ExtendedLocal {...this.props} />
       <Link to='/settings'> SETTINGS </Link>
  		</article>
  	  )
