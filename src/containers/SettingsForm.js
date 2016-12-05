@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { fetchWeatherPinnedLocation, pinLocation } from '../actions/index';
+import { fetchWeatherPinnedLocation, pinLocation, fetchExtendedWeatherPinnedLocation } from '../actions/index';
 import SettingsForm from '../components/SettingsForm';
 
 const mapStateToProps = state => {
@@ -14,6 +14,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     handleSubmit: text => dispatch(fetchWeatherPinnedLocation(text))
+			.then(dispatch(fetchExtendedWeatherPinnedLocation(text)))
       .then(dispatch(pinLocation(text))),
     handleDelete: (id) => {
         dispatch({
