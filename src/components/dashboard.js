@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router'
+<<<<<<< Updated upstream
 import PinnedWeather from '../containers/PinnedWeatherContainer'
 
 const Dashboard = () => {
@@ -11,6 +12,15 @@ const Dashboard = () => {
       <Link className='settings-link' to="/settings">
         Settings
       </Link>
+=======
+import PinnedWeather from '../components/PinnedWeather'
+
+const Dashboard = () => {
+  return (
+    <div className="city-card-container">
+      {this.props.children}
+      <PinnedWeather />
+>>>>>>> Stashed changes
     </div>
   )
 }
