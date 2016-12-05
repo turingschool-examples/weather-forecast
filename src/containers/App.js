@@ -1,24 +1,43 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { fetchWeatherCurrentLocation, fetchWeatherPinnedLocation } from '../actions/index'
+import Header from '../containers/Header'
 
 class App extends Component {
-  render() {
-    return (
-      <div>Hey!</div>
-    )
-  }
+	componentWillMount() {
+		this.getCurrentLocation()
+	}
+
+	getCurrentLocation(){
+			 navigator.geolocation.getCurrentPosition((position) => {
+				 this.props.fetchWeatherCurrentLocation(position)
+			 })
+		 }
+
+	render() {
+		return (
+			<article>
+				<Header {...this.props}/>
+				{this.props.children}
+			</article>
+		)
+	}
 }
 
 const mapStateToProps = state => {
-  // return an object of redux store data
-  // that you'd like available in your component
-  return {};
+	if (!state.LocalWeatherReducer.name) {
+    return {}
+  }
+  return {
+    name: state.LocalWeatherReducer.current_observation.display_location.full,
+    temp: state.LocalWeatherReducer.current_observation.temp_f,
+    desc: state.LocalWeatherReducer.current_observation.weather
+  }
 }
 
 const mapDispatchToProps = dispatch => {
-  // return an object of methods you'd like 
-  // to dispatch as redux actions
-  return {};
+  return bindActionCreators({fetchWeatherCurrentLocation, fetchWeatherPinnedLocation}, dispatch)
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
