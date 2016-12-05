@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
-import { browserHistory } from 'react-router';
+import { browserHistory, hashHistory } from 'react-router';
 import Routes from './routes';
 import thunk from 'redux-thunk';
 
@@ -20,7 +20,7 @@ const store = createStore(
 
 render(
   <Provider store={store}>
-    <Routes history={browserHistory} />
+    <Routes history={hashHistory} />
   </Provider>,
   document.getElementById('root')
 )
