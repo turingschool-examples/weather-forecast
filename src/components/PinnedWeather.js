@@ -2,14 +2,15 @@ import React from 'react';
 import { Link } from 'react-router';
 import { fetchWeatherPinnedLocation } from '../actions/index'
 
-const PinnedWeather = ({ state, id }) => {
+const PinnedWeather = ({ state, id }) =>
+{
   return (
     <div className="pinned-city">
       {state[id] ?
         <Link to={`/forecast/${id}`}>
           <div>
-            {state[id].current_observation.display_location.full}                  {state[id].current_observation.temp_f}&deg;
-            {state[id].current_observation.weather}
+            {state[id].data.current_observation.display_location.full}                  {state[id].data.current_observation.temp_f}&deg;
+            {state[id].data.current_observation.weather}
           </div>
         </Link>
         :

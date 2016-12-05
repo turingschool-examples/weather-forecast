@@ -5,13 +5,13 @@ import { fetchWeatherPinnedLocation } from '../actions/index'
 
 
 const mapStateToProps = state => {
-	if (!state.PinnedWeatherReducer.length) {
+	if (!state.PinLocation.length) {
     return {
       state: state,
     }
   }
   return {
-    state: state.PinnedWeatherReducer,
+    state: state.PinLocation,
   }
 }
 
