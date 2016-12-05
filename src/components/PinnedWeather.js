@@ -1,21 +1,31 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-const PinnedWeather = ({ current, extended }) => {
-  let forecast;
-
-  if (current) {
-    forecast = current.map((city, i) => <div key={i} className='pinned-weather'> Current forecast for {city.data.data.name}: {city.data.data.weather[0].description} and {city.data.data.main.temp}°F
-    <Link to={`/forecast/${i}`} className='link'> Extended Forecast </Link>
-    </div>)
-  } else { forecast = '' }
-
+const PinnedWeather = ({ state, id }) =>
+{
   return (
-  <article className="pinned-weather">
-    {forecast}
-  </article>
+    <div className="pinned-weather">
+      {state[id] ?
+        <Link to={`/forecast/${id}`}>
+          <div>
+            <span className='pinned-city'>
+              {state[id].data.current_observation.display_location.full}
+            </span>
+            <span className='pinned-observation'>
+              {state[id].data.current_observation.temp_f}&deg;
+              {state[id].data.current_observation.weather}
+            </span>
+          </div>
+        </Link>
+        :
+        <Link to="/settings">
+          Save a New City
+        </Link>
+      }
+    </div>
   )
 }
+
 
 
 export default PinnedWeather

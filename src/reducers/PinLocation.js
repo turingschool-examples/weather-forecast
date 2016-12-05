@@ -1,7 +1,7 @@
-const pinLocation = (state = [], action) => {
+const PinnedWeatherReducer = (state = [], action) => {
   switch (action.type) {
-    case 'PIN_LOCATION':
-      return [...state, {location: action.weatherInfo.data.name}]
+    case 'SET_PINNED':
+      return [...state, { data: action.weatherInfo }]
     case 'DELETE_PINNED_CITY':
       return state.filter((item, index) => index !== action.id)
     default:
@@ -9,4 +9,4 @@ const pinLocation = (state = [], action) => {
   }
 }
 
-export default pinLocation;
+export default PinnedWeatherReducer;

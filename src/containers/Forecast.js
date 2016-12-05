@@ -1,14 +1,14 @@
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import Forecast from '../components/forecast';
 
 const mapStateToProps = state => {
-	const myWeatherObject = state.PinnedWeatherReducer
-	if (!myWeatherObject.length) {
+	const myWeatherObject = state.LocalWeatherReducer
+	if (!myWeatherObject) {
     return {}
   }
   return {
-    state: myWeatherObject
+    state: state.PinLocation,
+		local: state.LocalWeatherReducer
   }
 }
 
