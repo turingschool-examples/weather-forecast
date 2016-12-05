@@ -1,9 +1,9 @@
 import React from 'react'
 
-const ExtendedLocal = ({ name, temp, desc }) => {
+const ExtendedLocal = ({ date, name, temp, desc }) => {
   return(
     <article>
-      <p>Extended Forecast:{name}, {temp}, {desc}</p>
+      <p>Extended Forecast:{date}, {name}, {temp}, {desc}</p>
     </article>
   )
 }
