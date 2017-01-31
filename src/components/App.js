@@ -13,8 +13,6 @@ class App extends Component {
       <Header />
     )
   }
-}
-
-
 
 export default App;
+
