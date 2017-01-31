@@ -1,7 +1,10 @@
 export const RECEIVE_FORECAST = 'RECEIVE_FORECAST';
 
 export const receiveForecast = (forecastData) => ({
-  // action object
+  return {
+    type: "SET_LOCAL_WEATHER"
+    forecastData
+  }
 });
 
 export const fetchForecast = options => dispatch => {

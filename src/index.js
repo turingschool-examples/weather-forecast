@@ -17,3 +17,8 @@ render(
   </Provider>,
   document.getElementById('root')
 )
+
+
+//create location reducers?
+//reducers is where data that is saved to store goes
+//think about what needs state
