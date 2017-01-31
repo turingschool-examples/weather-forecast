@@ -1,7 +1,8 @@
-const LocalWeatherReducer = (state={}, action){
+const LocalWeatherReducer = (state={}, action) => {
   switch (action.type){
     case 'SET_LOCAL_WEATHER':
-      console.log("Hello")
+    debugger
+      return console.log(action)
     default:
       return state
   }

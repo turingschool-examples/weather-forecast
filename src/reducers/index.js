@@ -1,14 +1,8 @@
 import { combineReducers } from 'redux'
-// import all other reducers into here
+import LocalWeatherReducer from './LocalWeatherReducer'
 
-const exampleReducer = (state = {}, action) => {
-  switch (action.type) {
-    default:
-      return state
-  }
-}
+const rootReducer = combineReducers({
+  LocalWeatherReducer
+})
 
-export default exampleReducer;
-
-
-//combine reducers to grab all reducers to save to store
+export default rootReducer
