@@ -1,15 +1,22 @@
 import { connect } from 'react-redux';
+import {receiveLocation, addUser} from '../actions'
+import App from '../components/App'
+import userReducer from "../reducers/user"
 
 const mapStateToProps = state => {
-  // return an object of redux store data
-  // that you'd like available in your component
-  return {};
+  return {user: state.userReducer};
 }
 
 const mapDispatchToProps = dispatch => {
-  // return an object of methods you'd like
-  // to dispatch as redux actions
-  return {};
+
+  return {
+    fetchLocation: (data)=>{
+      dispatch(receiveLocation(data))
+    },
+    storeUser: (user)=>{
+      dispatch(addUser(user))
+    }
+  };
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

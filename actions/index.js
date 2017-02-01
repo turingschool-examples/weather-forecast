@@ -14,10 +14,3 @@ export const receiveLocation = (data) => {
 export const fetchForecast = options => dispatch => {
   // return fetch API call
 };
-
-export const addUser = (user) => {
-  return {
-    type: "ADD_USER",
-    user
-  }
-}
