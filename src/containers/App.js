@@ -4,7 +4,7 @@ import App from '../components/App'
 
 const mapStateToProps = state => {
   return {
-    temp: state.currentWeatherReducer
+    weather: state.currentWeatherReducer,
   }
 }
 

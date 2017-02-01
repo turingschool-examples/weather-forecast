@@ -17,7 +17,6 @@ class App extends Component {
     .then((response) => {
       return response.json() })
     .then((json) => {
-      console.log(this.props.fetchLocation)
       this.props.fetchLocation(json) })
     .catch((error) => {
       console.log(error)
@@ -38,7 +37,7 @@ class App extends Component {
       return (
         <div>
         HELLO
-      {this.props.temp ? <div>{this.props.temp}</div> : <div>LOADING MOTHAFUCKA</div> }
+      {this.props.weather ? <div>{this.props.weather.temp} {this.props.weather.currently}</div> : <div>LOADING MOTHAFUCKA</div> }
     </div>
       )
     }
