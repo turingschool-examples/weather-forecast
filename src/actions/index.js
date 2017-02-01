@@ -1,11 +1,15 @@
-export const RECEIVE_FORECAST = 'RECEIVE_FORECAST';
+ const RECEIVE_FORECAST = 'RECEIVE_FORECAST';
 
-export const receiveForecast = (data) => {
+export const receiveLocation = (data) => {
+  const lat = data.coords.latitude
+  const long = data.coords.longitude
+
   return {
-    type: "SET_LOCAL_WEATHER",
-    data:data
-  }
-};
+    type: "RECIEVE_LOCATION",
+    latitude:data.coords.latitude,
+    longitude:data.coords.longitude
+  };
+}
 
 export const fetchForecast = options => dispatch => {
   // return fetch API call

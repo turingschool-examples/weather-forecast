@@ -4,8 +4,15 @@ import Header from './Header';
 
 class App extends Component {
 
+  getCurrentLocation(){
+    navigator.geolocation.getCurrentPosition((data) => {
+      return this.props.fetchLocation(data)
+         console.log(data.coords.latitude, data.coords.longitude);
+       })
+  }
+
   componentDidMount(){
-    this.props.fetchLocation()
+    this.getCurrentLocation()
   }
   render(){
     return (

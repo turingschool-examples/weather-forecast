@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
-import LocalWeatherReducer from './LocalWeatherReducer'
+import getLocation from './geolocation'
 
 const rootReducer = combineReducers({
-  LocalWeatherReducer
+  getLocation
 })
 
 export default rootReducer
