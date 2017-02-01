@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Header = (props) => {
-  props.location ? console.log(props.location.latitude, props.location.longitude) : console.log('No location yet')
+  // props.location ? console.log(props.location.latitude, props.location.longitude) : console.log('No location yet')
 
   return(
     <div className='header'>

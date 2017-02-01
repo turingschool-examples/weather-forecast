@@ -6,8 +6,15 @@ class App extends Component {
 
   getCurrentLocation(){
     navigator.geolocation.getCurrentPosition((data) => {
-      return this.props.fetchLocation(data)
-       })
+       this.props.fetchLocation(data)
+      // console.log(data)
+    }).then(()=>{
+      return this.getWeather()
+    })
+  }
+
+  getWeather(){
+    console.log('pizzarat')
   }
 
   componentDidMount(){
