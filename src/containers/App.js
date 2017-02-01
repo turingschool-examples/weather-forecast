@@ -1,15 +1,21 @@
 import { connect } from 'react-redux';
+import {receiveLocation} from '../actions'
+import App from '../components/App'
 
 const mapStateToProps = state => {
-  // return an object of redux store data
-  // that you'd like available in your component
-  return {};
+  return {
+    latitude:state.latitude,
+    longitude:state.longitude
+  };
 }
 
 const mapDispatchToProps = dispatch => {
-  // return an object of methods you'd like
-  // to dispatch as redux actions
-  return {};
+
+  return {
+    fetchLocation: (data)=>{
+      dispatch(receiveLocation(data))
+    }
+  };
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
