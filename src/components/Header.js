@@ -7,7 +7,6 @@ const Header = (props) => {
     <div className='header'>
       Current Lat: {props.location.latitude}
       Current Lat: {props.location.longitude}
-
     </div>
   )
 }
