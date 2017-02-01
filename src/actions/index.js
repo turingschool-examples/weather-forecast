@@ -6,6 +6,7 @@ export const receiveLocation = (data) => {
     latitude:data.coords.latitude,
     longitude:data.coords.longitude
   };
+
 }
 
 export const fetchForecast = options => dispatch => {

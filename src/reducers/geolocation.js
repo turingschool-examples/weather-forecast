@@ -8,7 +8,8 @@ const receiveLocation = (state={}, action) => {
       return location
     default:
       return state
-  }
+
+
 }
 
 export default receiveLocation

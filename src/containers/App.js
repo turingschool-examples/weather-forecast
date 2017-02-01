@@ -3,9 +3,10 @@ import {receiveLocation} from '../actions'
 import App from '../components/App'
 
 const mapStateToProps = state => {
-  // return an object of redux store data
-  // that you'd like available in your component
-  return {};
+  return {
+    latitude:state.latitude,
+    longitude:state.longitude
+  };
 }
 
 const mapDispatchToProps = dispatch => {
