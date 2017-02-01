@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import {receiveForecast} from '../actions'
+import {receiveLocation} from '../actions'
 import App from '../components/App'
 
 const mapStateToProps = state => {
@@ -12,7 +12,7 @@ const mapDispatchToProps = dispatch => {
 
   return {
     fetchLocation: (data)=>{
-      dispatch(receiveForecast(data))
+      dispatch(receiveLocation(data))
     }
   };
 }
