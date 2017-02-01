@@ -1,11 +1,15 @@
 const receiveLocation = (state={}, action) => {
   switch (action.type){
     case 'RECIEVE_LOCATION':
-    debugger
-      return action
+      const location = {
+        latitude:action.latitude,
+        longitude:action.longitude
+      }
+      return location
     default:
       return state
-  }
+    }
+
 }
 
 export default receiveLocation
