@@ -1,19 +1,19 @@
 import { connect } from 'react-redux';
-import {receiveLocation} from '../actions'
+import {currentWeather} from '../actions'
 import App from '../components/App'
 
 const mapStateToProps = state => {
   return {
-    latitude:state.latitude,
-    longitude:state.longitude
-  };
+    temp: state.currentWeatherReducer
+  }
 }
+
 
 const mapDispatchToProps = dispatch => {
 
   return {
-    fetchLocation: (data)=>{
-      dispatch(receiveLocation(data))
+    fetchLocation: (json)=>{
+      dispatch(currentWeather(json))
     }
   };
 }
