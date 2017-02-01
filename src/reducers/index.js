@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
-import getLocation from './geolocation'
+import Location from './geolocation'
 
 const rootReducer = combineReducers({
-  getLocation
+  Location
 })
 
 export default rootReducer

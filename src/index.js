@@ -9,7 +9,9 @@ import rootReducer from './reducers';
 
 const middleware = [thunk];
 
-const store = createStore(rootReducer, {}, applyMiddleware(...middleware))
+const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+
+const store = createStore(rootReducer,devTools)
 
 render(
   <Provider store={store}>

@@ -7,7 +7,6 @@ class App extends Component {
   getCurrentLocation(){
     navigator.geolocation.getCurrentPosition((data) => {
       return this.props.fetchLocation(data)
-         console.log(data.coords.latitude, data.coords.longitude);
        })
   }
 
