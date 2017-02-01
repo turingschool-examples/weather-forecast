@@ -1,11 +1,10 @@
- const RECEIVE_FORECAST = 'RECEIVE_FORECAST';
+ // const RECEIVE_FORECAST = 'RECEIVE_FORECAST';
 
-export const receiveLocation = (data) => {
+export const currentWeather = (json) => {
   return {
-    type: "RECIEVE_LOCATION",
-    latitude:data.coords.latitude,
-    longitude:data.coords.longitude
-  };
+    type: "CURRENT_WEATHER",
+    temp: json.current_observation.temp_f
+  }
 }
 
 export const fetchForecast = options => dispatch => {

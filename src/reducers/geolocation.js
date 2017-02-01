@@ -1,15 +1,18 @@
-const receiveLocation = (state={}, action) => {
+const currentWeatherReducer = (state=null, action) => {
   switch (action.type){
-    case 'RECIEVE_LOCATION':
-      const location = {
-        latitude:action.latitude,
-        longitude:action.longitude
-      }
-      return location
+    case 'CURRENT_WEATHER':
+      // const currentWeather = {
+      //   temp: action.temp,
+      //   // weather: action.
+      // }
+      return action.temp
     default:
       return state
     }
 
 }
 
-export default receiveLocation
+export default currentWeatherReducer
+
+// json.current_observation.temp_f
+// json.current_observation.overcast
