@@ -3,6 +3,12 @@ import React, { Component } from 'react';
 import Header from './Header';
 
 class App extends Component {
+  constructor(){
+    super();
+    this.state = {
+      input: ""
+    }
+  }
 
   getCurrentLocation(){
     navigator.geolocation.getCurrentPosition((data) => {
@@ -16,7 +22,13 @@ class App extends Component {
   }
   render(){
     return (
+      <div>
       <Header />
+      <input placeholder="enter something"
+             onChange={e => this.setState({input: e.target.value})}/>
+           <button onClick={() => this.props.storeUser(this.state.input)}>Ok</button>
+         <p>{this.props.user}</p>
+  </div>
     )
   }
 }
