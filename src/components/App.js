@@ -13,7 +13,6 @@ class App extends Component {
     }
   }
 
-
   getWeather(weatherURL){
     console.log(1.5)
     fetch(weatherURL)
@@ -37,6 +36,7 @@ class App extends Component {
       let now = moment().format('HH:mm:ss')
       let sunset = moment.parseZone(`${this.props.sunrise.sunset}`).local().format('HH:mm:ss')
       if (now > sunrise && now < sunset){console.log("it's fuckin' daytime baby!")}
+      else (console.log("it's night now. time to shine."))
     })
   }
 
