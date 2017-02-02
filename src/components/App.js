@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 // import { connect } from 'react-redux';
 import Header from './Header';
 import moment from 'moment-timezone';
-import HeaderContainer from '../containers/HeaderContainer';
-
-
+import HeaderContainer from '../containers/HeaderContainer'
+import CityCardsContainer from '../containers/CityCardsContainer'
 
 class App extends Component {
   constructor(){
@@ -44,9 +43,7 @@ class App extends Component {
   componentDidMount() {
     navigator.geolocation.getCurrentPosition((position) => {
       const weatherURL = `http://api.wunderground.com/api/6fc8de6a49f48b06/geolookup/forecast/hourly/forecast10day/conditions/q/${position.coords.latitude},${position.coords.longitude}.json`
-
       const sunriseURL = `http://api.sunrise-sunset.org/json?lat=${position.coords.latitude}&lng=${position.coords.longitude}&formatted=0`
-
       this.getWeather(weatherURL)
       this.getSunrise(sunriseURL)
       })
@@ -66,13 +63,12 @@ class App extends Component {
 
 
     render(){
-      // this.props.cityWeather.map((city)=>)
       return (
         <div>
           <HeaderContainer />
         <input value={this.state.zip} onChange={e => this.setState({zip: e.target.value})} placeholder="zip code" />
-      <button onClick={() => this.pinCity()}>Pin New City</button>
-          <div>{this.props.cityWeather.city ? <div>city: {this.props.cityWeather.city} Temp: {this.props.cityWeather.temp} Currently: {this.props.cityWeather.currently} </div>: <div>Not a valid zip</div>}</div>
+        <button onClick={() => this.pinCity()}>Pin New City</button>
+          <CityCardsContainer />
         </div>
       )
     }
