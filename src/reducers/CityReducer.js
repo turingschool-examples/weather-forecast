@@ -6,14 +6,6 @@ const cityWeatherReducer = (state=[], action) => {
       currently:action.currently,
       hourly:action.hourly,
       extended:action.extended}]
-      // const cityWeather =[...state,{
-      //   city: action.city,
-      //   temp: action.temp,
-      //   currently: action.currently
-      // }]
-      // debugger
-      // return cityWeather
-
     default:
       return state
     }
@@ -21,6 +13,3 @@ const cityWeatherReducer = (state=[], action) => {
 }
 
 export default cityWeatherReducer
-
-// json.current_observation.temp_f
-// json.current_observation.overcast
