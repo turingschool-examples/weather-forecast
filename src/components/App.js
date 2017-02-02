@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 // import { connect } from 'react-redux';
 import Header from './Header';
+import {Link} from 'react-router'
 import moment from 'moment-timezone';
 import HeaderContainer from '../containers/HeaderContainer'
 import CityCardsContainer from '../containers/CityCardsContainer'
@@ -69,6 +70,7 @@ class App extends Component {
         <input value={this.state.zip} onChange={e => this.setState({zip: e.target.value})} placeholder="zip code" />
         <button onClick={() => this.pinCity()}>Pin New City</button>
           <CityCardsContainer />
+        <Link to="/settings">Edit Pinned Cities >> </Link>
         </div>
       )
     }
