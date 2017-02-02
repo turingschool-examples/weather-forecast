@@ -1,7 +1,11 @@
 const sunriseSunsetReducer = (state=null, action) => {
   switch (action.type){
     case 'SET_SUNSET':
-      return {sunrise: action.sunrise, sunset: action.sunset}
+      const sunrise = {
+        sunrise: action.sunrise,
+        sunset: action.sunset
+      }
+      return sunrise
     default:
       return state
     }

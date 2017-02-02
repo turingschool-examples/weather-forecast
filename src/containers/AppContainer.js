@@ -5,7 +5,8 @@ import App from '../components/App';
 const mapStateToProps = state => {
   return {
     temp: state.currentWeatherReducer,
-    sunrise: state.sunriseSunsetReducer
+    sunrise: state.sunriseSunsetReducer,
+    weather: state.currentWeatherReducer,
   }
 }
 

@@ -2,16 +2,9 @@ import React, { Component } from 'react';
 // import { connect } from 'react-redux';
 import Header from './Header';
 import moment from 'moment';
+import HeaderContainer from '../containers/HeaderContainer'
 
 class App extends Component {
-
-  // getCurrentLocation(){
-  //   navigator.geolocation.getCurrentPosition((data) => {
-  //      this.props.fetchLocation(data).then(()=>{
-  //        return this.getWeather()
-  //      })
-  //   })
-  // }
 
   getWeather(weatherURL){
     fetch(weatherURL)
@@ -29,13 +22,17 @@ class App extends Component {
     .then((response) => {
       return response.json() })
     .then((json) => {
-      this.props.fetchSunriseSunset(json)
+      this.props.fetchSunriseSunset(json)})
+    .then(()=>{
+      console.log(this.props.sunrise.sunset)
+      console.log(moment.utc().format('h:mm:ss a').toUpperCase())
+      console.log(this.props.sunrise.sunrise)
     })
   }
 
   checkDayOrNight(){
-    console.log(this.props)
-    console.log(moment().format('h:mm:ss a'))
+    // console.log(this.props.sunrise)
+    // console.log(moment.utc().format('h:mm:ss a').toUpperCase())
   }
 
   componentDidMount() {
@@ -48,6 +45,7 @@ class App extends Component {
       this.getSunrise(sunriseURL)
       this.checkDayOrNight()
 
+
       })
     }
 
@@ -55,10 +53,10 @@ class App extends Component {
     render(){
       return (
         <div>
-        HELLO
-      {this.props.temp ? <div>{this.props.temp}</div> : <div>LOADING MOTHAFUCKA</div> }
-      {this.props.sunrise ? <div>{this.props.sunrise}</div> : <div>oh no</div>}
-    </div>
+
+          <HeaderContainer />
+          {this.props.sunrise ? <div>{this.props.sunrise.sunset} {this.props.sunrise.sunrise}</div> : <div>oh no</div>}
+      </div>
       )
     }
   }
