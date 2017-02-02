@@ -12,6 +12,7 @@ class App extends Component {
 
 
   getWeather(weatherURL){
+    console.log(1.5)
     fetch(weatherURL)
     .then((response) => {
       return response.json() })

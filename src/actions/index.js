@@ -1,6 +1,7 @@
  // const RECEIVE_FORECAST = 'RECEIVE_FORECAST';
 
 export const currentWeather = (json) => {
+  console.log(2)
   return {
     type: "CURRENT_WEATHER",
     temp: json.current_observation.temp_f,
