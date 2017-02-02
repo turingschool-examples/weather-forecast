@@ -1,10 +1,11 @@
 import { connect } from 'react-redux';
-import {currentWeather} from '../actions'
-import App from '../components/App'
+import {currentWeather, sunriseSunset} from '../actions';
+import App from '../components/App';
 
 const mapStateToProps = state => {
   return {
-    temp: state.currentWeatherReducer
+    temp: state.currentWeatherReducer,
+    sunrise: state.sunriseSunsetReducer
   }
 }
 
@@ -14,6 +15,9 @@ const mapDispatchToProps = dispatch => {
   return {
     fetchLocation: (json)=>{
       dispatch(currentWeather(json))
+    },
+    fetchSunriseSunset: (json)=>{
+      dispatch(sunriseSunset(json))
     }
   };
 }
