@@ -50,6 +50,7 @@ class App extends Component {
           <HeaderContainer />
         <input value={this.state.zip} onChange={e => this.setState({zip: e.target.value})} placeholder="zip code" />
       <button onClick={() => this.pinCity()}>Pin New City</button>
+          <div>{this.props.cityWeather.city ? <div>city: {this.props.cityWeather.city} Temp: {this.props.cityWeather.temp} Currently: {this.props.cityWeather.currently} </div>: <div>Not a valid zip</div>}</div>
         </div>
       )
     }
