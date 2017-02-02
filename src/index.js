@@ -6,12 +6,18 @@ import { browserHistory } from 'react-router';
 import Routes from './routes';
 import thunk from 'redux-thunk';
 import rootReducer from './reducers';
+import { loadState, saveState } from './localStorage';
 
 const middleware = [thunk];
 
 const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 
-const store = createStore(rootReducer,devTools)
+const persistedState = loadState();
+const store = createStore(rootReducer, persistedState, devTools)
+
+store.subscribe(()=>{
+  saveState(store.getState());
+})
 
 render(
   <Provider store={store}>
