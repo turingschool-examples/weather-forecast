@@ -5,8 +5,16 @@ import moment from 'moment-timezone';
 import HeaderContainer from '../containers/HeaderContainer'
 
 class App extends Component {
+  constructor(){
+    super()
+    this.state = {
+      zip: '',
+    }
+  }
+
 
   getWeather(weatherURL){
+    console.log(1.5)
     fetch(weatherURL)
     .then((response) => {
       return response.json() })
@@ -50,12 +58,28 @@ class App extends Component {
       })
     }
 
+    pinCity(){
+      const weatherURL = `http://api.wunderground.com/api/6fc8de6a49f48b06/geolookup/forecast/hourly/forecast10day/conditions/q/${this.state.zip}.json`
+      fetch(weatherURL)
+      .then((response) => {
+        return response.json() })
+      .then((json) => {
+        this.props.getPinned(json) })
+      .catch((error) => {
+        console.log(error)
+      })
+    }
+
 
     render(){
+      // this.props.cityWeather.map((city)=>)
       return (
         <div>
           <HeaderContainer />
-      </div>
+        <input value={this.state.zip} onChange={e => this.setState({zip: e.target.value})} placeholder="zip code" />
+      <button onClick={() => this.pinCity()}>Pin New City</button>
+          <div>{this.props.cityWeather.city ? <div>city: {this.props.cityWeather.city} Temp: {this.props.cityWeather.temp} Currently: {this.props.cityWeather.currently} </div>: <div>Not a valid zip</div>}</div>
+        </div>
       )
     }
   }

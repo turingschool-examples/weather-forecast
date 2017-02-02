@@ -1,4 +1,5 @@
 const currentWeatherReducer = (state={}, action) => {
+  console.log(3)
   switch (action.type){
     case 'CURRENT_WEATHER':
       const weather = {
