@@ -1,12 +1,19 @@
-const cityWeatherReducer = (state={}, action) => {
+const cityWeatherReducer = (state=[], action) => {
   switch (action.type){
     case 'CITY_WEATHER':
-      const cityWeather = {
-        city: action.city,
-        temp: action.temp,
-        currently: action.currently
-      }
-      return cityWeather
+    return [...state, {city:action.city,
+      temp:action.temp,
+      currently:action.currently,
+      hourly:action.hourly,
+      extended:action.extended}]
+      // const cityWeather =[...state,{
+      //   city: action.city,
+      //   temp: action.temp,
+      //   currently: action.currently
+      // }]
+      // debugger
+      // return cityWeather
+
     default:
       return state
     }

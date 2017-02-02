@@ -12,6 +12,7 @@ class App extends Component {
 
 
   getWeather(weatherURL){
+    console.log(1.5)
     fetch(weatherURL)
     .then((response) => {
       return response.json() })
@@ -35,8 +36,6 @@ class App extends Component {
       .then((response) => {
         return response.json() })
       .then((json) => {
-        debugger;
-        console.log(json);
         this.props.getPinned(json) })
       .catch((error) => {
         console.log(error)
@@ -45,6 +44,7 @@ class App extends Component {
 
 
     render(){
+      // this.props.cityWeather.map((city)=>)
       return (
         <div>
           <HeaderContainer />
