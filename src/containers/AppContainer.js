@@ -4,7 +4,7 @@ import App from '../components/App'
 
 
 const mapStateToProps = state => {
-  console.log(4)
+  // console.log(4)
   return {
     temp: state.currentWeatherReducer,
     sunrise: state.sunriseSunsetReducer,
@@ -15,7 +15,7 @@ const mapStateToProps = state => {
 
 
 const mapDispatchToProps = dispatch => {
-console.log(1)
+// console.log(1)
   return {
     fetchLocation: (json)=>{
       dispatch(currentWeather(json))
