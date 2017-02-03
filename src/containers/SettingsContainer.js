@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import {cityWeather} from '../actions'
+import {cityWeather, removeCity} from '../actions'
 import Settings from '../components/Settings'
 
 const mapStateToProps = state => {
@@ -8,4 +8,12 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, null)(Settings);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    removeClickedCity: (index) => {
+      dispatch(removeCity(index))
+    },
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Settings);
