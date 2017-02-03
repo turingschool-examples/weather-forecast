@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router'
 
 
 const CityCards = (props) => {
@@ -9,7 +10,9 @@ const CityCards = (props) => {
             City: {city.city}
             <li>Temperature: {city.temp}</li>
             <li>Currently: {city.currently}</li>
-            <button>View Extended</button>
+            <Link to="/forecast">
+              <button onClick={()=>props.changeFeatureCity(city)}>View Extended</button>
+            </Link>
           </ul>
         </div>
       )

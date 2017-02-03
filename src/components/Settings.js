@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {Link} from 'react-router'
 
 const Settings = (props) => {
 
@@ -15,6 +15,9 @@ const Settings = (props) => {
     return(
       <div>
         {cities}
+        <Link to="/">
+          <button>Get Back, Get Back</button>
+        </Link>
       </div>
     )
 }

@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import {cityWeather} from '../actions'
+import {cityWeather, changeFeatureCity} from '../actions'
 import CityCards from '../components/CityCards'
 
 const mapStateToProps = state => {
@@ -8,4 +8,12 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, null)(CityCards);
+const mapDispatchToProps = dispatch => {
+  return {
+    changeFeatureCity: (city)=>{
+      dispatch(changeFeatureCity(city))
+    }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(CityCards);
