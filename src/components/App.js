@@ -59,7 +59,9 @@ class App extends Component {
       .catch((error) => {
         console.log(error)
       })
-     this.props.cityWeather.splice(0,1)
+    if(this.props.cityWeather.length >= 3){
+      this.props.cityWeather.shift()
+    }
   }
 
     render(){
