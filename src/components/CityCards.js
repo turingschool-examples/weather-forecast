@@ -11,7 +11,7 @@ const CityCards = (props) => {
             <li>Temperature: {city.temp}</li>
             <li>Currently: {city.currently}</li>
             <Link to="/forecast">
-              <button>View Extended</button>
+              <button onClick={()=>props.changeFeatureCity(city)}>View Extended</button>
             </Link>
           </ul>
         </div>

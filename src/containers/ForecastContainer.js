@@ -4,7 +4,8 @@ import Forecast from '../components/Forecast'
 
 const mapStateToProps = state => {
   return {
-    cityWeather: state.cityWeatherReducer
+    cityWeather: state.cityWeatherReducer,
+    featureCity: state.changeFeatureCityReducer.featureCity.city
   }
 }
 

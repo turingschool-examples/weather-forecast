@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import { connect } from 'react-redux';
-import Header from './Header';
+// import Header from './Header';
 import {Link} from 'react-router'
 import moment from 'moment-timezone';
 import HeaderContainer from '../containers/HeaderContainer'
@@ -15,7 +15,6 @@ class App extends Component {
   }
 
   getWeather(weatherURL){
-    console.log(1.5)
     fetch(weatherURL)
     .then((response) => {
       return response.json() })
