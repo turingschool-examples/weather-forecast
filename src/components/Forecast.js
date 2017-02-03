@@ -7,15 +7,18 @@ const Forecast = (props) => {
   const extendedForecast = props.featureCity.extended.map((day, index)=>{
     return (
       <div>
-        {props.featureCity.extended[index].conditions}
+        <h3>{props.featureCity.extended[index].date.weekday}</h3>
+        {props.featureCity.extended[index].conditions} with a high of {props.featureCity.extended[index].high.fahrenheit} and low of {props.featureCity.extended[index].low.fahrenheit}.
       </div>
     )
   });
   console.log(props.featureCity.extended[0].conditions)
   return (
     <div className='extended-forecast'>
-      <p>extended-forecast: {extendedForecast}</p>
-      <p>currently: {props.featureCity.currently} &  {props.featureCity.temp}</p>
+      <h2>Your {props.featureCity.city} Extended Forecast</h2>
+      <p> currently: {props.featureCity.currently} &  {props.featureCity.temp}</p>
+
+        {extendedForecast}
       <p></p>
       <Link to="/">
         <button>Get Back, Get Back</button>
