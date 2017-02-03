@@ -7,6 +7,8 @@ import Routes from './routes';
 import thunk from 'redux-thunk';
 import rootReducer from './reducers';
 import { loadState, saveState } from './localStorage';
+import './styles.css';
+
 
 const middleware = [thunk];
 
