@@ -13,6 +13,9 @@ const mapDispatchToProps = (dispatch) => {
     removeClickedCity: (index) => {
       dispatch(removeCity(index))
     },
+    getPinned: (json)=>{
+      dispatch(cityWeather(json))
+    },
   }
 }
 
