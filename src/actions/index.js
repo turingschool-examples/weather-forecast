@@ -6,18 +6,28 @@ export const currentWeather = (json) => {
     type: "CURRENT_WEATHER",
     city: json.location.city,
     temp: json.current_observation.temp_f,
-    currently: json.current_observation.weather
+    currently: json.current_observation.weather,
+    extended: json.forecast.simpleforecast.forecastday,
+    hourly: json.hourly_forecast
   }
 }
 
 export const cityWeather = (json) => {
   return {
     type: "CITY_WEATHER",
+    id: Date.now(),
     city: json.location.city,
     temp: json.current_observation.temp_f,
     currently: json.current_observation.weather,
     extended: json.forecast.simpleforecast.forecastday,
     hourly: json.hourly_forecast
+  }
+}
+
+export const removeCity = (index) => {
+  return {
+    type: 'REMOVE_CITY',
+    index,
   }
 }
 
