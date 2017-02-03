@@ -14,6 +14,5 @@ export const saveState = (state) => {
     const localStorageState = JSON.stringify(state);
     localStorage.setItem('state', localStorageState)
   } catch (error) {
-    console.log('shit')
   }
 }

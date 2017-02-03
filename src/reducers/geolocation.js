@@ -1,5 +1,5 @@
 const currentWeatherReducer = (state={}, action) => {
-  console.log(3)
+  // console.log(3)
   switch (action.type){
     case 'CURRENT_WEATHER':
       const weather = {
@@ -15,6 +15,3 @@ const currentWeatherReducer = (state={}, action) => {
 }
 
 export default currentWeatherReducer
-
-// json.current_observation.temp_f
-// json.current_observation.overcast
