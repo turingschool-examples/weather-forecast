@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-// import { connect } from 'react-redux';
-// import Header from './Header';
+import Header from './Header';
 import {Link} from 'react-router'
 import moment from 'moment-timezone';
 import HeaderContainer from '../containers/HeaderContainer'
@@ -15,6 +14,7 @@ class App extends Component {
   }
 
   getWeather(weatherURL){
+
     fetch(weatherURL)
     .then((response) => {
       return response.json() })
@@ -59,8 +59,10 @@ class App extends Component {
       .catch((error) => {
         console.log(error)
       })
+    if(this.props.cityWeather.length >= 3){
+      this.props.cityWeather.shift()
     }
-
+  }
 
     render(){
       return (

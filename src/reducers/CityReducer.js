@@ -7,7 +7,8 @@ const cityWeatherReducer = (state=[], action) => {
         temp:action.temp,
         currently:action.currently,
         hourly:action.hourly,
-        extended:action.extended}]
+        extended:action.extended
+      }]
     case 'REMOVE_CITY':
       return [
         ...state.slice(0, action.index),

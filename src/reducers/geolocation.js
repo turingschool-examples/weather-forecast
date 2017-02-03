@@ -16,6 +16,3 @@ const currentWeatherReducer = (state={}, action) => {
 }
 
 export default currentWeatherReducer
-
-// json.current_observation.temp_f
-// json.current_observation.overcast
