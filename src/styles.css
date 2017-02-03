@@ -1,0 +1,13 @@
+.header {
+  background-color: magenta;
+}
+
+.city-card {
+  border: black 1px solid;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 27%;
+  height: 400px;
+  margin-left: 10px;
+}
