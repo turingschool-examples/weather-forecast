@@ -10,6 +10,9 @@ class App extends Component {
     super()
     this.state = {
       zip: '',
+      pressed: [],
+      secretCode: [38,38,40,40,37,39,37,39,66,65],
+      newman: false,
     }
   }
 
@@ -59,19 +62,31 @@ class App extends Component {
       .catch((error) => {
         console.log(error)
       })
-    if(this.props.cityWeather.length >= 3){
-      this.props.cityWeather.shift()
+      if(this.props.cityWeather.length >= 3){
+        this.props.cityWeather.shift()
+      }
     }
-  }
+
+    konami(e){
+      let newArray = this.state.pressed;
+      newArray.push(e.keyCode)
+      newArray.splice(-this.state.secretCode.length -1, newArray.length - this.state.secretCode.length)
+      if(newArray.toString() === this.state.secretCode.toString()){
+        this.setState({newman: !this.state.newman})
+      }
+      this.setState({pushed: newArray});
+      console.log(this.state.pushed, this.state.secretCode)
+    }
 
     render(){
       return (
-        <div>
+        <div tabIndex="0" onKeyUp={(e)=>this.konami(e)}>
+          {this.state.newman ? <img src="https://media.giphy.com/media/uOAXDA7ZeJJzW/giphy.gif"/> : null}
           <HeaderContainer />
-        <input value={this.state.zip} onChange={e => this.setState({zip: e.target.value})} placeholder="zip code" />
-        <button onClick={() => this.pinCity()}>Pin New City</button>
-          <CityCardsContainer />
-        <Link to="/settings">Edit Pinned Cities >> </Link>
+          <input value={this.state.zip} onChange={e => this.setState({zip: e.target.value})} placeholder="zip code" />
+          <button onClick={() => this.pinCity()}>Pin New City</button>
+            <CityCardsContainer />
+          <Link to="/settings">Edit Pinned Cities >> </Link>
         </div>
       )
     }
