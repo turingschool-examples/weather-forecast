@@ -4,6 +4,7 @@ const currentWeatherReducer = (state={}, action) => {
     case 'CURRENT_WEATHER':
       const weather = {
         temp: action.temp,
+        city: action.city,
         currently: action.currently
       }
       return weather
