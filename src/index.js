@@ -6,6 +6,8 @@ import { browserHistory } from 'react-router';
 import Routes from './routes';
 import rootReducer from './reducers';
 import { loadState, saveState } from './localStorage';
+import './styles.css';
+
 
 const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 
