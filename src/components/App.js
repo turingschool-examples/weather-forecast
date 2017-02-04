@@ -34,13 +34,6 @@ class App extends Component {
       return response.json() })
     .then((json) => {
       this.props.fetchSunriseSunset(json)})
-    .then(()=>{
-      let sunrise = moment.parseZone(`${this.props.sunrise.sunrise}`).local().format('HH:mm:ss')
-      let now = moment().format('HH:mm:ss')
-      let sunset = moment.parseZone(`${this.props.sunrise.sunset}`).local().format('HH:mm:ss')
-      if (now > sunrise && now < sunset){console.log("it's fuckin' daytime baby!")}
-      else (console.log("it's night now. time to shine."))
-    })
   }
 
   componentDidMount() {
@@ -75,13 +68,41 @@ class App extends Component {
         this.setState({newman: !this.state.newman})
       }
       this.setState({pushed: newArray});
-      console.log(this.state.pushed, this.state.secretCode)
+    }
+
+    timeOfDay(){
+      let message = ""
+      let now = moment().format('HH:mm:ss')
+      let sunrise = moment.parseZone(`${this.props.sunrise.sunrise}`).local().format('HH:mm:ss')
+      let midMorning = moment(sunrise, 'HH:mm:ss').add(2,'h').format('HH:mm:ss')
+      let sunset = moment.parseZone(`${this.props.sunrise.sunset}`).local().format('HH:mm:ss')
+      let lateAfternoon = moment(sunset, 'HH:mm:ss').subtract(2,'h').format('HH:mm:ss')
+      switch(true){
+        case (sunrise < now && now < midMorning):
+          message = "rise and shine baby";
+          break;
+        case (midMorning < now && now < lateAfternoon):
+          message = "you better be doing productive shit rn";
+          break;
+        case (lateAfternoon < now && now < sunset):
+          message = "probably should consider eating dinner";
+          break;
+        default:
+          message = "it's night now. time to shine"
+      }
+      return message
     }
 
     render(){
       return (
         <div tabIndex="0" onKeyUp={(e)=>this.konami(e)}>
           {this.state.newman ? <img src="https://media.giphy.com/media/uOAXDA7ZeJJzW/giphy.gif"/> : null}
+          <section className='sundial'>
+            sunrise: {moment.parseZone(`${this.props.sunrise.sunrise}`).local().format('hh:mm a')}
+            <br/>sunset: {moment.parseZone(`${this.props.sunrise.sunset}`).local().format('hh:mm a')}
+            <br/>currently: {moment().format('hh:mm a')}
+            <br/>{this.timeOfDay()}
+          </section>
           <HeaderContainer />
           <input value={this.state.zip} onChange={e => this.setState({zip: e.target.value})} placeholder="zip code" />
           <button onClick={() => this.pinCity()}>Pin New City</button>
