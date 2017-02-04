@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router'
+import HeaderContainer from '../containers/HeaderContainer'
 
 export default class Forecast extends React.Component{
   constructor(props){
@@ -17,7 +18,7 @@ export default class Forecast extends React.Component{
 
     const hourlyForecast = this.props.featureCity.hourly.map((hour, index)=>{
       return (
-        <div>
+        <div className='forecast-card'>
           <h3>{this.props.featureCity.hourly[index].FCTTIME.weekday_name} {this.props.featureCity.hourly[index].FCTTIME.civil}</h3>
           <p>{this.props.featureCity.hourly[index].condition} {this.props.featureCity.hourly[index].temp.english}F feels like {this.props.featureCity.hourly[index].feelslike.english}</p>
         </div>
@@ -26,7 +27,7 @@ export default class Forecast extends React.Component{
 
     const extendedForecast = this.props.featureCity.extended.map((day, index)=>{
       return (
-        <div>
+        <div className='forecast-card'>
           <h3>{this.props.featureCity.extended[index].date.weekday}</h3>
           {this.props.featureCity.extended[index].conditions} with a high of {this.props.featureCity.extended[index].high.fahrenheit} and low of {this.props.featureCity.extended[index].low.fahrenheit}.
         </div>
@@ -35,9 +36,10 @@ export default class Forecast extends React.Component{
 
     return (
       <div className='extended-forecast'>
+        <HeaderContainer />
         <h1>Your {this.props.featureCity.city} {this.state.showHourly ? "Hourly" : "Extended"} Forecast</h1>
-          <button onClick={()=>{this.setState({showHourly: !this.state.showHourly})}}>{this.state.showHourly ? "Show Extended" : "Show Hourly"}</button>
         <h2> currently: {this.props.featureCity.currently} &  {this.props.featureCity.temp}</h2>
+          <button onClick={()=>{this.setState({showHourly: !this.state.showHourly})}}>{this.state.showHourly ? "Show Extended" : "Show Hourly"}</button>
           {this.state.showHourly ? hourlyForecast : extendedForecast}
         <p></p>
         <Link to="/">
