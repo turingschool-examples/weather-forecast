@@ -95,7 +95,7 @@ class App extends Component {
 
     render(){
       return (
-        <div tabIndex="0" onKeyUp={(e)=>this.konami(e)}>
+        <div className='app' tabIndex="0" onKeyUp={(e)=>this.konami(e)}>
           {this.state.newman ? <img src="https://media.giphy.com/media/uOAXDA7ZeJJzW/giphy.gif"/> : null}
           <section className='sundial'>
             sunrise: {moment.parseZone(`${this.props.sunrise.sunrise}`).local().format('hh:mm a')}
