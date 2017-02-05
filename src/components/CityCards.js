@@ -22,6 +22,11 @@ const CityCards = (props) => {
     return(
       <div className='cities'>
         {cities}
+        {(props.cityWeather.length < 3)?
+          <div className='city-card'>
+            <Link to="/settings">Add Another City</Link>
+          </div>
+          : null }
       </div>
     )
 }

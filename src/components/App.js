@@ -81,9 +81,9 @@ class App extends Component {
 
           <HeaderContainer />
           <section className="new-city">
-            <input value={this.state.zip}
-                   onChange={e => this.setState({zip: e.target.value})}
-                   placeholder="zip code"
+            <input  value={this.state.zip}
+                    onChange={e => this.setState({zip: e.target.value})}
+                    placeholder="zip code"
             />
             <button onClick={() => this.pinCity()}>
               Pin New City

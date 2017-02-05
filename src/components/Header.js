@@ -26,6 +26,7 @@ const Header = (props) => {
 
   return(
     <div className='header'>
+      <h1>Weather be Weather</h1>
       <section className='sundial'>
         sunrise: {sunrise} sunset: {sunset} currently: {now}
         <br/>{message}
