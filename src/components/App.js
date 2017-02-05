@@ -70,38 +70,22 @@ class App extends Component {
       this.setState({pushed: newArray});
     }
 
-    // timeOfDay(){
-    //   let message = ""
-    //   let now = moment().format('HH:mm:ss')
-    //   let sunrise = moment.parseZone(`${this.props.sunrise.sunrise}`).local().format('HH:mm:ss')
-    //   let midMorning = moment(sunrise, 'HH:mm:ss').add(2,'h').format('HH:mm:ss')
-    //   let sunset = moment.parseZone(`${this.props.sunrise.sunset}`).local().format('HH:mm:ss')
-    //   let lateAfternoon = moment(sunset, 'HH:mm:ss').subtract(2,'h').format('HH:mm:ss')
-    //   switch(true){
-    //     case (sunrise < now && now < midMorning):
-    //       message = "rise and shine baby";
-    //       break;
-    //     case (midMorning < now && now < lateAfternoon):
-    //       message = "you better be doing productive shit rn";
-    //       break;
-    //     case (lateAfternoon < now && now < sunset):
-    //       message = "probably should consider eating dinner";
-    //       break;
-    //     default:
-    //       message = "it's night now. time to shine"
-    //   }
-    //   return message
-    // }
-
     render(){
       return (
         <div tabIndex="0" className="konami" onKeyUp={(e)=>this.konami(e)}>
-          {this.state.newman ? <img src="https://media.giphy.com/media/uOAXDA7ZeJJzW/giphy.gif"/> : null}
+          {this.state.newman ? <img src="https://media.giphy.com/media/uOAXDA7ZeJJzW/giphy.gif" className="newman"/> : null}
           <HeaderContainer />
-          <input value={this.state.zip} onChange={e => this.setState({zip: e.target.value})} placeholder="zip code" />
-          <button onClick={() => this.pinCity()}>Pin New City</button>
-            <CityCardsContainer />
-          <Link to="/settings">Edit Pinned Cities >> </Link>
+          <section className="new-city">
+            <input value={this.state.zip}
+                   onChange={e => this.setState({zip: e.target.value})}
+                   placeholder="zip code"
+            />
+            <button onClick={() => this.pinCity()}>
+              Pin New City
+            </button>
+          </section>
+          <CityCardsContainer />
+          <Link to="/settings" className='edit-cities'>Edit Pinned Cities >> </Link>
         </div>
       )
     }

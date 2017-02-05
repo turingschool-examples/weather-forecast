@@ -9,8 +9,6 @@ export default class Forecast extends React.Component{
       showHourly: false,
     }
   }
-// const Forecast = (props) => {
-
 
   render(){
 
@@ -37,11 +35,21 @@ export default class Forecast extends React.Component{
     return (
       <div className='extended-forecast'>
         <HeaderContainer />
-        <h1>Your {this.props.featureCity.city} {this.state.showHourly ? "Hourly" : "Extended"} Forecast</h1>
-        <h2> currently: {this.props.featureCity.currently} &  {this.props.featureCity.temp}</h2>
-          <button onClick={()=>{this.setState({showHourly: !this.state.showHourly})}}>{this.state.showHourly ? "Show Extended" : "Show Hourly"}</button>
+        <section className='forecast-header'>
+          <h1>
+            Your {this.props.featureCity.city} {this.state.showHourly ? "Hourly" : "Extended"} Forecast
+          </h1>
+          <button
+            onClick={()=>{this.setState({showHourly: !this.state.showHourly})}}>{this.state.showHourly ? "Show Extended" : "Show Hourly"}
+          </button>
+          <Link to="/">
+            <button>Get Back, Get Back</button>
+          </Link>
+        </section>
+
+        <section className="the-forecast">
           {this.state.showHourly ? hourlyForecast : extendedForecast}
-        <p></p>
+        </section>
         <Link to="/">
           <button>Get Back, Get Back</button>
         </Link>
@@ -49,4 +57,3 @@ export default class Forecast extends React.Component{
     )
   }
 }
-// export default Forecast

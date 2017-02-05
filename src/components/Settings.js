@@ -12,7 +12,7 @@ constructor(){
 render(){
     const cities = this.props.cityWeather.map((city, index)=>{
          return (
-           <div className='city-card'>
+           <div className='edit-city'>
              <ul>
                <button onClick={() => this.props.removeClickedCity(index)}>X</button> City: {city.city}
              </ul>
@@ -34,13 +34,23 @@ render(){
       this.props.cityWeather.shift()
       }
     }
-    
+
     return(
       <div>
         <HeaderContainer />
-        <input value={this.state.zip} onChange={e => this.setState({zip: e.target.value})} placeholder="zip code" />
-        <button onClick={() => pinCity()}>Pin New City</button>
-        <div className='city-settings'>{cities}</div>
+        <div className="new-city">
+          <input value={this.state.zip}
+                 onChange={e => this.setState({zip: e.target.value})}
+                 placeholder="zip code"
+          />
+          <button onClick={() => pinCity()}>
+            Pin New City
+          </button>
+        </div>
+
+        <div className='city-settings'>
+          {cities}
+        </div>
         <Link to="/">
           <button>Home</button>
         </Link>

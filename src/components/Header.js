@@ -27,17 +27,17 @@ const Header = (props) => {
   return(
     <div className='header'>
       <section className='sundial'>
-        sunrise: {sunrise}
-        <br/>sunset: {sunset}
-        <br/>currently: {now}
+        sunrise: {sunrise} sunset: {sunset} currently: {now}
         <br/>{message}
       </section>
-      {props.weather ? <div>Current Weather for <strong>{props.weather.city} </strong> Temperature: {props.weather.temp}&#176;F Currently: {props.weather.currently} </div> : <div>LOADING</div> }
-      <Link to="/forecast">
-        <button onClick={()=>props.changeFeatureCity(props.weather)}>
-          View Extended Forecast >>
-        </button>
-      </Link>
+      <section className='currently'>
+        {props.weather ? <div>Current Weather for <strong>{props.weather.city} </strong> Temperature: {props.weather.temp}&#176;F Currently: {props.weather.currently} </div> : <div>LOADING</div> }
+        <Link to="/forecast">
+          <button onClick={()=>props.changeFeatureCity(props.weather)}>
+            View Extended Forecast >>
+          </button>
+        </Link>
+      </section>
     </div>
   )
 }
