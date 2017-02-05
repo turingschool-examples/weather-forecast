@@ -73,7 +73,9 @@ class App extends Component {
     render(){
       return (
         <div tabIndex="0" className="konami" onKeyUp={(e)=>this.konami(e)}>
+
           {this.state.newman ? <img src="https://media.giphy.com/media/uOAXDA7ZeJJzW/giphy.gif" className="newman"/> : null}
+
           <HeaderContainer />
           <section className="new-city">
             <input value={this.state.zip}
