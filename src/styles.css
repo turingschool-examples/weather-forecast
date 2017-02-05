@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Cardo:400,700|Pathway+Gothic+One');
+
+body {
+  font-family: 'Pathway Gothic One', sans-serif;
+}
+
+h1 {
+  font-family: 'Cardo', serif;
+  font-weight: bold;
+}
+
+h3 {
+  font-family: 'Cardo', serif;
+  font-weight: bold;
+}
+
+/*App page*/
+.konami {
+  height: 97vh;
+  outline: none;
+}
+
+.newman {
+  z-index: 100;
+  height: 97vh;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.header {
+  display: flex;
+  border: 1px solid black;
+  padding: 15px;
+}
+
+.sundial {
+  display: flex;
+  border: 1px solid black;
+}
+
+.currently {
+  display: flex;
+  border: 1px solid black;
+  margin-left: 30px;
+}
+
+.new-city {
+  display: flex;
+  border: 1px solid black;
+  margin: 10px;
+  padding: 10px;
+}
+
+.cities {
+  display: flex;
+  border: 1px solid black;
+  margin: 10px;
+  justify-content: space-around;
+}
+
+.city-card {
+  border: 1px solid black;
+  display: flex;
+  width: 27%;
+  height: 400px;
+  margin: 10px;
+}
+
+.edit-cities{
+  display: flex;
+  border: 1px solid black;
+  margin: 10px;
+}
+
+/*forecast page*/
+.forecast-header{
+  display: flex;
+  border: 1px solid black;
+  margin: 10px;
+  justify-content: center;
+}
+.the-forecast{
+  display: flex;
+  border: 1px solid black;
+}
+.forecast-card{
+  display: flex;
+  border: 1px solid black;
+  margin: 5px;
+  flex-direction: column;
+}
+/*settings page*/
+.city-settings{
+  display: flex;
+  border: 1px solid black;
+  flex-direction: column;
+}
+
+.edit-city{
+  display: flex;
+  border: 1px solid black;
+  margin: 10px;
+}
