@@ -74,7 +74,10 @@ class App extends Component {
       return (
         <div tabIndex="0" className="konami" onKeyUp={(e)=>this.konami(e)}>
 
-          {this.state.newman ? <img src="https://media.giphy.com/media/uOAXDA7ZeJJzW/giphy.gif" className="newman"/> : null}
+          {this.state.newman ?
+            <img src="https://media.giphy.com/media/uOAXDA7ZeJJzW/giphy.gif" className="newman"/>
+            : null
+          }
 
           <HeaderContainer />
           <section className="new-city">
@@ -88,6 +91,7 @@ class App extends Component {
           </section>
           <CityCardsContainer />
           <Link to="/settings" className='edit-cities'>Edit Pinned Cities >> </Link>
+
         </div>
       )
     }
