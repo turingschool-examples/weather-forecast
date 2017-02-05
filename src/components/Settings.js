@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router'
+import HeaderContainer from '../containers/HeaderContainer'
 
 class Settings extends Component {
 constructor(){
@@ -18,6 +19,7 @@ render(){
            </div>
          )
        })
+
     const pinCity = () => {
       const weatherURL = `http://api.wunderground.com/api/6fc8de6a49f48b06/geolookup/forecast/hourly/forecast10day/conditions/q/${this.state.zip}.json`
       fetch(weatherURL)
@@ -32,11 +34,13 @@ render(){
       this.props.cityWeather.shift()
       }
     }
+    
     return(
       <div>
+        <HeaderContainer />
         <input value={this.state.zip} onChange={e => this.setState({zip: e.target.value})} placeholder="zip code" />
         <button onClick={() => pinCity()}>Pin New City</button>
-        <div className='city-card'>{cities}</div>
+        <div className='city-settings'>{cities}</div>
         <Link to="/">
           <button>Home</button>
         </Link>

@@ -5,6 +5,7 @@ import Header from '../components/Header'
 const mapStateToProps = state => {
   return {
     weather: state.currentWeatherReducer,
+    sunrise: state.sunriseSunsetReducer,
   }
 }
 
