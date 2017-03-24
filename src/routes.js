@@ -1,11 +1,16 @@
 import React from 'react';
-import { Router, Route } from 'react-router';
-
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom';
 import App from './components/App';
 
-const Routes = (props) => (
-  <Router {...props}>
-    <Route path="/" component={App} />
+const Routes = () => (
+  <Router>
+    <div className="Router">
+      <Route exact path="/" component={App}/>
+    </div>
   </Router>
 );
 
